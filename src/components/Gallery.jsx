@@ -45,7 +45,7 @@ export default function FitnessInspirationSection() {
       {/* 🟨 IMAGE CONTAINER (Centered vertically via flex) */}
       <div className="flex items-center justify-between w-[80%] max-w-[1400px] z-10">
         {/* LEFT IMAGE */}
-        <div className="relative">
+        <div className="relative top-[10vh]">
           <img
             src="https://framerusercontent.com/images/LqURARtPkDasnz8xNZRw6V7LVc.png"
             alt="Fitness Woman"
