@@ -1,128 +1,70 @@
 "use client";
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 
 const services = [
   {
-    title: "Window Tinting",
-    image:
-      "https://images.unsplash.com/photo-1607863680005-c0a4693eec6e?q=80&w=1470&auto=format&fit=crop",
-    link: "/window-tinting",
+    name: "Window Tinting",
+    img: "https://framerusercontent.com/images/QCoTSMtHpimr9lp2CmaQOtriXU.png",
   },
   {
-    title: "Stereo Fitting",
-    image:
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1470&auto=format&fit=crop",
-    link: "/stereo-fitting",
+    name: "Stereo Fitting",
+    img: "https://framerusercontent.com/images/LqURARtPkDasnz8xNZRw6V7LVc.png",
   },
   {
-    title: "Reverse Camera Fitting",
-    image:
-      "https://images.unsplash.com/photo-1607863680015-80ccbdce1927?q=80&w=1470&auto=format&fit=crop",
-    link: "/reverse-camera",
+    name: "Reverse Camera",
+    img: "https://framerusercontent.com/images/ZiSz1ONCwWlZSSTVgpW4sZm1hI.png",
   },
   {
-    title: "Parking Sensors",
-    image:
-      "https://images.unsplash.com/photo-1597004311890-b2f92c3b0e1a?q=80&w=1470&auto=format&fit=crop",
-    link: "/parking-sensors",
+    name: "Parking Sensors",
+    img: "https://framerusercontent.com/images/H2mFADPlDeJZEZVhsqozg6Yc0.jpg",
   },
   {
-    title: "Dashcams",
-    image:
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1470&auto=format&fit=crop",
-    link: "/dashcams",
+    name: "Dashcams",
+    img: "https://framerusercontent.com/images/JrDw3jtgKjcQOYfgKW5tggM5U.jpg",
   },
   {
-    title: "Commercial Window Tinting",
-    image:
-      "https://images.unsplash.com/photo-1597092418741-07e93c8e3b8b?q=80&w=1470&auto=format&fit=crop",
-    link: "/commercial-tinting",
+    name: "Commercial Window",
+    img: "https://framerusercontent.com/images/H2mFADPlDeJZEZVhsqozg6Yc0.jpg",
   },
   {
-    title: "Residential Tinting",
-    image:
-      "https://images.unsplash.com/photo-1614332287893-17a0c0a2c23a?q=80&w=1470&auto=format&fit=crop",
-    link: "/residential-tinting",
+    name: "Residential Tinting",
+    img: "https://framerusercontent.com/images/QCoTSMtHpimr9lp2CmaQOtriXU.png",
   },
 ];
 
 const OurServices = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 900,
-      easing: "ease-out-cubic",
-      once: true,
-    });
-  }, []);
-
-  // Split services into chunks of 3 per row
-  const chunkArray = (arr, size) => {
-    const chunks = [];
-    for (let i = 0; i < arr.length; i += size) {
-      chunks.push(arr.slice(i, i + size));
-    }
-    return chunks;
-  };
-
-  const serviceRows = chunkArray(services, 3);
-
   return (
-    <section
-      id="our-services"
-      className="relative py-20 px-6 font-['Poppins'] overflow-hidden bg-[#0a0a0a] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"
-    >
-      {/* Red Overlay */}
-      <div className="absolute inset-0 bg-linear-to-b from-[#0a0a0a]/90 via-[#0a0a0a]/95 to-black z-0"></div>
-
+    <section className="w-full bg-black text-white py-20 overflow-x-hidden">
       {/* Heading */}
-      <div className="relative text-center mb-14 z-10" data-aos="fade-up">
-        <h3 className="text-[#E50914] text-3xl md:text-4xl font-extrabold uppercase tracking-wide drop-shadow-lg">
+      <div className="text-center mb-12">
+        <h2 className="text-yellow-400 text-3xl font-extrabold uppercase mb-3 tracking-wide">
           Our Services
-        </h3>
-        <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-base md:text-lg leading-relaxed">
-          We offer a wide range of expert automotive and residential services —
-          each designed to enhance performance, safety, and style.
+        </h2>
+        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          We offer professional automotive and tinting services to upgrade and
+          protect your vehicle or property.
         </p>
       </div>
 
-      {/* Service Rows */}
-      <div className="relative space-y-10 z-10">
-        {serviceRows.map((row, rowIndex) => (
+      {/* Service Cards */}
+      <div className="flex flex-wrap justify-center items-center gap-0 w-full max-w-[1600px] mx-auto overflow-hidden">
+        {services.map((service, index) => (
           <div
-            key={rowIndex}
-            className={`grid gap-6 ${
-              row.length === 1
-                ? "grid-cols-1 justify-items-center"
-                : row.length === 2
-                ? "grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-center"
-                : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-            }`}
-            data-aos="fade-up"
+            key={index}
+            className="relative w-1/4 min-w-[300px] h-[550px] transform transition-transform duration-500 hover:scale-[1.03]"
           >
-            {row.map((service, index) => (
-              <a
-                key={index}
-                href={service.link}
-                className="relative group overflow-hidden rounded-lg shadow-lg border border-[#1f1f1f] hover:border-[#E50914] transition-all duration-300 w-full max-w-[420px]"
-              >
-                {/* Image */}
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-[300px] object-cover transform transition-transform duration-700 group-hover:scale-110"
-                />
-
-                {/* Red Overlay */}
-                <div className="absolute inset-0 bg-black/60 group-hover:bg-[#E50914]/50 transition duration-500"></div>
-
-                {/* Title */}
-                <h6 className="absolute inset-0 flex items-center justify-center text-xl md:text-2xl font-extrabold uppercase tracking-wider text-white transition duration-300 group-hover:text-[#ff4b4b] text-center px-3">
-                  {service.title}
-                </h6>
-              </a>
-            ))}
+            {/* Image */}
+            <img
+              src={service.img}
+              alt={service.name}
+              className="w-full h-full object-cover"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40"></div>
+            {/* Text */}
+            <h3 className="absolute inset-0 flex items-center justify-center text-center px-2 text-2xl font-bold uppercase tracking-wide">
+              {service.name}
+            </h3>
           </div>
         ))}
       </div>

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function FitnessInspirationSection() {
   return (
-    <section className="relative w-full h-screen bg-[#2B2F34] overflow-hidden">
+    <section className="relative w-full h-screen bg-[#2B2F34] overflow-hidden flex items-center justify-center">
       {/* ✅ CSS Animations */}
       <style>{`
         @keyframes moveLeftToRight {
@@ -25,66 +25,49 @@ export default function FitnessInspirationSection() {
       `}</style>
 
       {/* 🔹 FIRST MOVING TEXT (Behind Both Images) */}
-      <div className="absolute top-[38%] w-full overflow-hidden whitespace-nowrap z-3">
-        <h2 className="animate-leftToRight text-[8vw] font-extrabold uppercase tracking-tight leading-none text-white/90">
+      <div className="absolute top-[30%] w-full overflow-hidden whitespace-nowrap z-0">
+        <h2 className="animate-leftToRight text-[5vw] font-extrabold uppercase tracking-tight leading-none text-white/90">
           Daily Fitness Inspiration • Follow Us For Daily Fitness Inspiration •
         </h2>
       </div>
 
       {/* 🔹 SECOND MOVING TEXT (Overlaps Right Image) */}
-      <div className="absolute top-[58%] w-full overflow-hidden whitespace-nowrap z-20">
-        <h2 className="animate-rightToLeft text-[8vw] font-extrabold uppercase tracking-tight leading-none">
+      <div className="absolute bottom-[35%] w-full overflow-hidden whitespace-nowrap z-20">
+        <h2 className="animate-rightToLeft text-[5vw] font-extrabold uppercase tracking-tight leading-none">
           <span className="text-[#FFD42A]">Follow Us</span>{" "}
           <span className="text-white">For Daily Fitness Inspiration •</span>{" "}
-          <span className="text-[#FFD42A]">Follow Us For Daily Fitness Inspiration •</span>
+          <span className="text-[#FFD42A]">
+            Follow Us For Daily Fitness Inspiration •
+          </span>
         </h2>
       </div>
 
-      {/* 🟨 LEFT IMAGE — ABOVE FIRST TEXT */}
-      <div
-        className="
-          absolute
-          left-60
-          top-[330px]
-          z-15
-        "
-      >
+      {/* 🟨 IMAGE CONTAINER (Centered vertically via flex) */}
+      <div className="flex items-center justify-between w-[80%] max-w-[1400px] z-10">
+        {/* LEFT IMAGE */}
         <div className="relative">
           <img
             src="https://framerusercontent.com/images/LqURARtPkDasnz8xNZRw6V7LVc.png"
             alt="Fitness Woman"
             className="w-[380px] h-[380px] object-cover rounded-2xl shadow-lg"
           />
-          <span
-            className="
-              absolute bottom-[25px] left-[25px]
-              text-[#FFD42A] font-extrabold uppercase
-              text-[36px] leading-none tracking-wide
-            "
-          >
+          <span className="absolute bottom-[25px] left-[25px] text-[#FFD42A] font-extrabold uppercase text-[36px] leading-none tracking-wide">
             Inspiration
           </span>
         </div>
-      </div>
 
-      {/* 🏋 RIGHT IMAGE — TEXT SHOULD OVERLAP HERE */}
-      <div
-        className="
-          absolute
-          right-60
-          top-[250px]
-          z-10
-        "
-      >
-        <img
-          src="https://framerusercontent.com/images/ZiSz1ONCwWlZSSTVgpW4sZm1hI.png"
-          alt="Bodybuilder"
-          className="w-[380px] h-[380px] object-cover rounded-2xl shadow-lg"
-        />
+        {/* RIGHT IMAGE */}
+        <div className="relative">
+          <img
+            src="https://framerusercontent.com/images/ZiSz1ONCwWlZSSTVgpW4sZm1hI.png"
+            alt="Bodybuilder"
+            className="w-[380px] h-[380px] object-cover rounded-2xl shadow-lg"
+          />
+        </div>
       </div>
 
       {/* 🌙 Subtle overlay for depth */}
-      <div className="absolute inset-0 bg-linear-to-t from-[#2B2F34]/20 via-transparent to-[#2B2F34]/20 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-[#2B2F34]/30 via-transparent to-[#2B2F34]/30 pointer-events-none"></div>
     </section>
   );
 }
