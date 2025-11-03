@@ -1,35 +1,44 @@
 "use client";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     name: "Window Tinting",
     img: "https://framerusercontent.com/images/QCoTSMtHpimr9lp2CmaQOtriXU.png",
+    link: "/windowtinting",
   },
   {
     name: "Stereo Fitting",
     img: "https://framerusercontent.com/images/LqURARtPkDasnz8xNZRw6V7LVc.png",
+    link: "/stereofitting",
   },
   {
     name: "Reverse Camera",
     img: "https://framerusercontent.com/images/ZiSz1ONCwWlZSSTVgpW4sZm1hI.png",
+    link: "/reversecamera",
   },
   {
     name: "Parking Sensors",
     img: "https://framerusercontent.com/images/H2mFADPlDeJZEZVhsqozg6Yc0.jpg",
+    link: "/parkingsensors",
   },
   {
     name: "Dashcams",
     img: "https://framerusercontent.com/images/JrDw3jtgKjcQOYfgKW5tggM5U.jpg",
+    link: "/dashcams",
   },
   {
     name: "Commercial Window",
     img: "https://framerusercontent.com/images/H2mFADPlDeJZEZVhsqozg6Yc0.jpg",
+    link: "/commercialwindow",
   },
   {
     name: "Residential Tinting",
     img: "https://framerusercontent.com/images/QCoTSMtHpimr9lp2CmaQOtriXU.png",
+    link: "/residentialtinting",
   },
+
 ];
 
 const OurServices = () => {
@@ -59,12 +68,22 @@ const OurServices = () => {
               alt={service.name}
               className="w-full h-full object-cover"
             />
+
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/40"></div>
-            {/* Text */}
-            <h3 className="absolute inset-0 flex items-center justify-center text-center px-2 text-2xl font-bold uppercase tracking-wide">
-              {service.name}
-            </h3>
+            <div className="absolute inset-0 bg-black/50"></div>
+
+            {/* Text + Button */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+              <h3 className="text-2xl font-bold uppercase tracking-wide mb-6">
+                {service.name}
+              </h3>
+              <Link
+                to={service.link}
+                className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-lg uppercase text-sm hover:bg-yellow-500 transition-colors duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
         ))}
       </div>
