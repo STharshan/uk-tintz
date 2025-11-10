@@ -35,7 +35,7 @@ export default function FitnessInspirationSection() {
         }
       `}</style>
 
-      {/* 🔹 FIRST MOVING TEXT (Behind Both Images) */}
+      {/* 🔹 FIRST MOVING TEXT */}
       <div className="absolute top-[30%] w-full overflow-hidden whitespace-nowrap z-0">
         <h2
           className="animate-leftToRight text-[5vw] font-extrabold uppercase tracking-tight leading-none text-white/90"
@@ -45,7 +45,7 @@ export default function FitnessInspirationSection() {
         </h2>
       </div>
 
-      {/* 🔹 SECOND MOVING TEXT (Overlaps Right Image) */}
+      {/* 🔹 SECOND MOVING TEXT */}
       <div className="absolute bottom-[35%] w-full overflow-hidden whitespace-nowrap z-20">
         <h2
           className="animate-rightToLeft text-[5vw] font-extrabold uppercase tracking-tight leading-none"
@@ -54,9 +54,7 @@ export default function FitnessInspirationSection() {
         >
           <span className="text-red-500">Follow Us</span>{" "}
           <span className="text-white">For Daily Fitness Inspiration •</span>{" "}
-          <span className="text-red-500">
-            Follow us for Car Inspiration •
-          </span>
+          <span className="text-red-500">Follow us for Car Inspiration •</span>
         </h2>
       </div>
 
@@ -88,8 +86,7 @@ export default function FitnessInspirationSection() {
         </div>
       </div>
 
-      {/* 🌙 Overlay for depth */}
-      <div className="absolute inset-0 bg-linear-to-t from-[#2B2F34]/30 via-transparent to-[#2B2F34]/30 pointer-events-none"></div>
+      {/* Removed overlay for pure black background */}
     </section>
   );
 }
