@@ -5,6 +5,8 @@ import StatsSection from '../components/Story'
 import HeroCurasol from '../components/Curasol'
 import HeroSection from '../components/Hero'
 import ContactSection from '../components/Contact'
+import FindUs from '../components/Findus'
+import GallerySlider from '../components/GallerySlider'
 
 const Home = () => {
     return (
@@ -13,8 +15,10 @@ const Home = () => {
             <HeroCurasol />
             <OurServices />
             <FitnessInspirationSection />
+            <GallerySlider />
             <StatsSection />
             <ContactSection />
+            <FindUs />
         </div>
     )
 }

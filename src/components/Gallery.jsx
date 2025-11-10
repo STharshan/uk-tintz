@@ -1,9 +1,20 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function FitnessInspirationSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+      offset: 100,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
-    <section className="relative w-full h-screen bg-[#2B2F34] overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-screen bg-black overflow-hidden flex items-center justify-center">
       {/* ✅ CSS Animations */}
       <style>{`
         @keyframes moveLeftToRight {
@@ -26,48 +37,59 @@ export default function FitnessInspirationSection() {
 
       {/* 🔹 FIRST MOVING TEXT (Behind Both Images) */}
       <div className="absolute top-[30%] w-full overflow-hidden whitespace-nowrap z-0">
-        <h2 className="animate-leftToRight text-[5vw] font-extrabold uppercase tracking-tight leading-none text-white/90">
-          Daily Fitness Inspiration • Follow Us For Daily Fitness Inspiration •
+        <h2
+          className="animate-leftToRight text-[5vw] font-extrabold uppercase tracking-tight leading-none text-white/90"
+          data-aos="fade-down"
+        >
+          Follow us for Car Inspiration • Follow us for Car Inspiration •
         </h2>
       </div>
 
       {/* 🔹 SECOND MOVING TEXT (Overlaps Right Image) */}
       <div className="absolute bottom-[35%] w-full overflow-hidden whitespace-nowrap z-20">
-        <h2 className="animate-rightToLeft text-[5vw] font-extrabold uppercase tracking-tight leading-none">
-          <span className="text-[#FFD42A]">Follow Us</span>{" "}
+        <h2
+          className="animate-rightToLeft text-[5vw] font-extrabold uppercase tracking-tight leading-none"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <span className="text-red-500">Follow Us</span>{" "}
           <span className="text-white">For Daily Fitness Inspiration •</span>{" "}
-          <span className="text-[#FFD42A]">
-            Follow Us For Daily Fitness Inspiration •
+          <span className="text-red-500">
+            Follow us for Car Inspiration •
           </span>
         </h2>
       </div>
 
-      {/* 🟨 IMAGE CONTAINER (Centered vertically via flex) */}
-      <div className="flex items-center justify-between w-[80%] max-w-[1400px] z-10">
+      {/* 🟨 IMAGE CONTAINER */}
+      <div
+        className="flex items-center justify-between w-[80%] max-w-[1400px] z-10"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+      >
         {/* LEFT IMAGE */}
-        <div className="relative top-[10vh]">
+        <div className="relative top-[10vh]" data-aos="fade-right">
           <img
-            src="https://framerusercontent.com/images/LqURARtPkDasnz8xNZRw6V7LVc.png"
+            src="/uk1.png"
             alt="Fitness Woman"
             className="w-[380px] h-[380px] object-cover rounded-2xl shadow-lg"
           />
-          <span className="absolute bottom-[25px] left-[25px] text-[#FFD42A] font-extrabold uppercase text-[36px] leading-none tracking-wide">
-            Inspiration
+          <span className="absolute bottom-[25px] left-[25px] text-red-500 font-extrabold uppercase text-[36px] leading-none tracking-wide">
+            Car Inspiration
           </span>
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative">
+        <div className="relative" data-aos="fade-left" data-aos-delay="200">
           <img
-            src="https://framerusercontent.com/images/ZiSz1ONCwWlZSSTVgpW4sZm1hI.png"
+            src="/uk2.png"
             alt="Bodybuilder"
             className="w-[380px] h-[380px] object-cover rounded-2xl shadow-lg"
           />
         </div>
       </div>
 
-      {/* 🌙 Subtle overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#2B2F34]/30 via-transparent to-[#2B2F34]/30 pointer-events-none"></div>
+      {/* 🌙 Overlay for depth */}
+      <div className="absolute inset-0 bg-linear-to-t from-[#2B2F34]/30 via-transparent to-[#2B2F34]/30 pointer-events-none"></div>
     </section>
   );
 }

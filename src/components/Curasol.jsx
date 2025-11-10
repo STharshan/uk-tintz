@@ -1,285 +1,279 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import { ArrowRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HeroCurasol = () => {
-    const [activeIndex, setActiveIndex] = useState(1);
-    const scrollContainerRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(1);
+  const scrollContainerRef = useRef(null);
 
-    const projects = [
-        {
-            id: "1",
-            title: "Flooring Makeover Project",
-            category: "Maintenance Projects",
-            snippet:
-                "The Flooring Makeover Project involved installing new flooring throughout the residential property owned by Mr. and Mrs. Garcia, enhancing durability and aesthetics.",
-            image:
-                "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/662c016c84173d9135f61110_9315.webp",
-            link: "/projects/flooring-makeover-project",
-        },
-        {
-            id: "2",
-            title: "Fixture Fixer Operation",
-            category: "Maintenance Projects",
-            snippet:
-                "The Fixture Fixer Operation aimed to repair and replace various fixtures in the commercial property of ABC Restaurant, ensuring a welcoming and functional environment for patrons.",
-            image:
-                "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/662568969dc57b5340de5ffd_13144.avif",
-            link: "/projects/fixture-fixer-operation",
-        },
-        {
-            id: "3",
-            title: "Renovation Revamp Venture",
-            category: "Plumbing Projects",
-            snippet:
-                "The Renovation Revamp Venture focused on transforming the outdated kitchen and bathrooms of the Johnson family's home, enhancing functionality and modernizing the living spaces.",
-            image:
-                "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/662567aee66b7f6a3358de7f_22162068.avif",
-            link: "/projects/renovation-revamp-venture",
-        },
-        {
-            id: "4",
-            title: "Carpentry Solutions Project",
-            category: "Electrical Projects",
-            snippet:
-                "The Carpentry Solutions Project aimed to provide customized carpentry solutions for the office renovation project of Ms. Rodriguez, adding functionality and aesthetic appeal to the workspace.",
-            image:
-                "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/6625676a94bb460b0cfa6b15_21271632.avif",
-            link: "/projects/carpentry-solutions-project",
-        },
-        {
-            id: "5",
-            title: "Electrical Upgrade Initiative",
-            category: "Electrical Projects",
-            snippet:
-                "The Electrical Upgrade Initiative focused on enhancing the electrical systems in the commercial space of XYZ Corporation, improving safety and efficiency.",
-            image:
-                "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/6625671e1b3394c91fee3bb9_2957.avif",
-            link: "/projects/electrical-upgrade-initiative",
-        },
-        {
-            id: "6",
-            title: "Plumbing Rescue Mission",
-            category: "Plumbing Projects",
-            snippet:
-                "The 'Plumbing Rescue Mission' project aimed to address extensive plumbing issues in the residential property of Mr. and Mrs. Thompson. The project's goal was to restore functionality to the plumbing system while ensuring long-term reliability and customer satisfaction.",
-            image:
-                "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/6625654d4f070cbfab060858_256.avif",
-            link: "/projects/plumbing-rescue-mission",
-        },
-    ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
 
-    const scrollToCard = (index) => {
-        const container = scrollContainerRef.current;
-        if (!container) return;
+  const projects = [
+    {
+      id: "1",
+      title: "Automotive Window Tint",
+      category: "Sleek Protection",
+      snippet:
+        "The Automotive Window Tint Project focused on enhancing both the comfort and style of our client’s vehicle. By applying premium-grade window films, we reduced glare, improved privacy, and blocked harmful UV rays — all while giving the car a sleek, modern appearance.",
+      beforeImage: "/s5.jpg",
+      afterImage: "/s24.jpg",
+      link: "/projects/flooring-makeover-project",
+    },
+    {
+      id: "2",
+      title: "Commercial Window Tint",
+      category: "Professional Clarity",
+      snippet:
+        "The Commercial Window Tint Project was designed to elevate workplace efficiency and protection. Our installation reduced heat and glare across office spaces, cutting energy costs and creating a more comfortable working environment. The tinting also provided an added layer of privacy and security, ensuring both practicality and professional appeal.",
+      beforeImage: "/s27.jpg",
+      afterImage: "/s28.jpg",
+      link: "/projects/fixture-fixer-operation",
+    },
+    {
+      id: "3",
+      title: "Car Vinyl Wrap",
+      category: "Custom Expression",
+      snippet:
+        "The Car Vinyl Wrap Project transformed the vehicle’s entire look, reflecting the client’s personality and brand identity. Using high-quality, durable vinyl, we achieved a flawless finish that not only enhanced aesthetics but also protected the original paintwork from scratches and sun damage.",
+      beforeImage: "/s1.jpg",
+      afterImage: "/s13.jpg",
+      link: "/projects/renovation-revamp-venture",
+    },
+    {
+      id: "4",
+      title: "Interior Dash Vinyl Wrap",
+      category: "Refined Detail",
+      snippet:
+        "The Interior Dash Vinyl Wrap Project brought a refined touch to the vehicle’s cabin, combining durability with design precision. We wrapped key interior panels with textured or glossy finishes, upgrading the look and feel of the dashboard while safeguarding it from everyday wear and tear.",
+      beforeImage: "/s5.jpg",
+      afterImage: "/s6.jpg",
+      link: "/projects/carpentry-solutions-project",
+    },
+    {
+      id: "5",
+      title: "Residential Window Tint",
+      category: "Comfort Living",
+      snippet:
+        "The Residential Window Tint Project focused on improving home comfort, privacy, and energy efficiency. By applying high-performance tint films to household windows, we reduced heat buildup, minimised glare, and protected interiors from harmful UV rays — all while maintaining clear, natural light.",
+      beforeImage: "/s26.jpg",
+      afterImage: "/s23.jpg",
+      link: "/projects/electrical-upgrade-initiative",
+    },
+  ];
 
-        const containerWidth = container.offsetWidth;
-        const cardElements = container.querySelectorAll('.project-card');
-        const targetCard = cardElements[index];
+  const displayOrder = [1, 2, 3, 4, 0];
 
-        if (targetCard) {
-            const cardWidth = targetCard.offsetWidth;
-            const scrollPosition = targetCard.offsetLeft - (containerWidth / 2) + (cardWidth / 2 ) ;
+  const scrollToCard = (index) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
 
-            container.scrollTo({
-                left: scrollPosition,
-                behavior: 'smooth',
-            });
+    const containerWidth = container.offsetWidth;
+    const cardElements = container.querySelectorAll(".project-card");
+    const targetCard = cardElements[index];
+
+    if (targetCard) {
+      const cardWidth = targetCard.offsetWidth;
+      const scrollPosition =
+        targetCard.offsetLeft - containerWidth / 2 + cardWidth / 2;
+      container.scrollTo({ left: scrollPosition, behavior: "smooth" });
+    }
+
+    setActiveIndex(index);
+  };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleScroll = () => {
+      const containerWidth = container.offsetWidth;
+      const scrollLeft = container.scrollLeft;
+      const centerPosition = scrollLeft + containerWidth / 2;
+
+      const cardElements = container.querySelectorAll(".project-card");
+      let closestIndex = 0;
+      let minDistance = Infinity;
+
+      cardElements.forEach((card, index) => {
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        const distance = Math.abs(centerPosition - cardCenter);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = index;
         }
+      });
 
-        setActiveIndex(index);
+      setActiveIndex(closestIndex);
     };
 
-    useEffect(() => {
-        const container = scrollContainerRef.current;
-        if (!container) return;
+    container.addEventListener("scroll", handleScroll);
 
-        const handleScroll = () => {
-            const containerWidth = container.offsetWidth;
-            const scrollLeft = container.scrollLeft;
-            const centerPosition = scrollLeft + containerWidth / 2;
+    setTimeout(() => scrollToCard(displayOrder[0]), 300);
 
-            const cardElements = container.querySelectorAll('.project-card');
-            let closestIndex = 0;
-            let minDistance = Infinity;
+    const initialDelay = setTimeout(() => {
+      let orderIndex = 0;
+      const autoScroll = setInterval(() => {
+        const nextIndex = displayOrder[orderIndex];
+        scrollToCard(nextIndex);
+        orderIndex = (orderIndex + 1) % displayOrder.length;
+      }, 4000);
 
-            cardElements.forEach((card, index) => {
-                const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-                const distance = Math.abs(centerPosition - cardCenter);
+      container.autoScrollInterval = autoScroll;
+    }, 4000);
 
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestIndex = index;
-                }
-            });
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+      clearTimeout(initialDelay);
+      if (container.autoScrollInterval)
+        clearInterval(container.autoScrollInterval);
+    };
+  }, []);
 
-            setActiveIndex(closestIndex);
-        };
-
-        container.addEventListener('scroll', handleScroll);
-
-        // Show second card initially
-        setTimeout(() => scrollToCard(1), 300);
-
-        // Wait 4 seconds before starting auto-scroll
-        const initialDelay = setTimeout(() => {
-            const autoScroll = setInterval(() => {
-                setActiveIndex((prevIndex) => {
-                    const nextIndex = (prevIndex + 1) % projects.length;
-                    scrollToCard(nextIndex);
-                    return nextIndex;
-                });
-            }, 4000);
-
-            // Store interval ID for cleanup
-            container.autoScrollInterval = autoScroll;
-        }, 4000);
-
-        return () => {
-            container.removeEventListener('scroll', handleScroll);
-            clearTimeout(initialDelay);
-            if (container.autoScrollInterval) {
-                clearInterval(container.autoScrollInterval);
-            }
-        };
-    }, []);
-
-    return (
-        <div className="min-h-screen bg-black text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
-            <div className="max-w-7xl mx-auto p-6">
-                {/* Header Section */}
-                <div>
-                    <p className="text-xs sm:text-sm text-center text-gray-400 uppercase tracking-wider">
-                        Our Projects
-                    </p>
-                    <h1 className="text-3xl sm:text-4xl mb-10 text-center md:text-5xl lg:text-6xl font-bold leading-tight">
-                        Discover Our Completed Projects
-                    </h1>
-                </div>
-
-                {/* Projects Carousel */}
-                <div className="relative py-6" style={{ perspective: '1500px' }}>
-                    <div
-                        ref={scrollContainerRef}
-                        className="flex gap-4 sm:gap-6 py-10 md:gap-8 overflow-x-auto overflow-visible scrollbar-hide scroll-smooth pb-6 sm:pb-8"
-                        style={{
-                            scrollbarWidth: 'none',
-                            msOverflowStyle: 'none',
-                            scrollSnapType: 'x mandatory',
-                        }}
-                    >
-                        <div className="shrink-0" style={{ width: 'calc(50vw - 140px)' }}></div>
-
-                        {projects.map((project, index) => (
-                            <div
-                                key={index}
-                                className="project-card shrink-0 w-[300px] sm:w-[340px] md:w-[360px] lg:w-[380px] transition-all duration-700 ease-out cursor-pointer group"
-                                style={{
-                                    transform:
-                                        index === activeIndex
-                                            ? 'scale(1.05) translateZ(80px) translateY(-20px)'
-                                            : 'scale(0.88) translateZ(0px) translateY(0px)',
-                                    opacity: index === activeIndex ? 1 : 0.5,
-                                    zIndex: index === activeIndex ? 50 : 10,
-                                    scrollSnapAlign: 'center',
-                                }}
-                                onClick={() => scrollToCard(index)}
-                            >
-                                <div
-                                    className={`bg-zinc-900 rounded-3xl overflow-hidden h-[520px] sm:h-[560px] md:h-[580px] transition-all duration-500 border ${
-                                        index === activeIndex
-                                            ? 'border-zinc-700 shadow-2xl shadow-orange-600/20'
-                                            : 'border-zinc-800 shadow-lg'
-                                    }`}
-                                >
-                                    {/* Before/After Images */}
-                                    <div className="grid grid-cols-2 gap-3 p-5">
-                                        <div className="rounded-2xl overflow-hidden h-[200px] bg-zinc-800">
-                                            <img
-                                                src={project.image}
-                                                alt={`${project.title} before`}
-                                                className="w-full h-full object-cover opacity-60"
-                                            />
-                                        </div>
-                                        <div className="rounded-2xl overflow-hidden h-[200px] bg-zinc-800">
-                                            <img
-                                                src={project.image}
-                                                alt={`${project.title} after`}
-                                                className="w-full h-full object-cover"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    {/* Content */}
-                                    <div className="px-6 pb-6">
-                                        <h3 className="text-xl sm:text-2xl font-bold mb-4 uppercase tracking-tight leading-tight">
-                                            {project.title}
-                                        </h3>
-                                        
-                                        <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-6">
-                                            {project.snippet}
-                                        </p>
-
-                                        {/* Footer */}
-                                        <div className="flex items-center justify-between pt-4 border-t border-zinc-800">
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-1 h-8 bg-orange-600 rounded-full"></div>
-                                                <span className="text-white font-medium text-sm">
-                                                    {project.category}
-                                                </span>
-                                            </div>
-                                            <button className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition-all duration-300">
-                                                  <ArrowRight className='group-hover:-rotate-45 transition-transform duration-300' />
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-
-                        <div className="shrink-0" style={{ width: 'calc(50vw - 140px)' }}></div>
-                    </div>
-
-                    {/* Pagination Dots */}
-                    <div className="flex justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8">
-                        {projects.map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => scrollToCard(index)}
-                                className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
-                                    index === activeIndex
-                                        ? 'bg-orange-600 w-6 sm:w-8'
-                                        : 'bg-gray-600 w-1.5 sm:w-2 hover:bg-gray-500'
-                                }`}
-                            />
-                        ))}
-                    </div>
-                </div>
-
-                {/* Home Button */}
-                <button className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 bg-orange-600 hover:bg-orange-700 text-white p-3 sm:p-4 rounded-lg shadow-lg transition-colors z-100">
-                    <svg
-                        className="w-5 h-5 sm:w-6 sm:h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                        />
-                    </svg>
-                </button>
-            </div>
-
-            <style jsx>{`
-                .scrollbar-hide::-webkit-scrollbar {
-                    display: none;
-                }
-            `}</style>
+  return (
+    <div
+      className="bg-black text-white py-8 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      data-aos="fade-up"
+    >
+      <div className="max-w-7xl mx-auto p-6">
+        {/* Header Section */}
+        <div data-aos="fade-down">
+          <p className="text-xs sm:text-sm text-center text-gray-400 uppercase tracking-wider">
+            Our Projects
+          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-10 text-center font-bold leading-tight">
+            Discover Our Completed Projects
+          </h1>
         </div>
-    );
+
+        {/* Projects Carousel */}
+        <div
+          className="relative py-6"
+          style={{ perspective: "1500px" }}
+          data-aos="zoom-in-up"
+        >
+          <div
+            ref={scrollContainerRef}
+            className="flex gap-4 sm:gap-6 py-10 md:gap-8 overflow-x-auto overflow-visible scrollbar-hide scroll-smooth pb-6 sm:pb-8"
+            style={{
+              scrollSnapType: "x mandatory",
+              paddingLeft: "10vw",
+              paddingRight: "10vw",
+            }}
+          >
+            <div className="shrink-0 w-[10vw]"></div>
+
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="project-card shrink-0 w-[70vw] sm:w-[60vw] md:w-[400px] lg:w-[380px] transition-all duration-700 ease-out cursor-pointer group"
+                style={{
+                  transform:
+                    index === activeIndex
+                      ? "scale(1.05) translateZ(80px) translateY(-20px)"
+                      : "scale(0.88) translateZ(0px) translateY(0px)",
+                  opacity: index === activeIndex ? 1 : 0.5,
+                  zIndex: index === activeIndex ? 50 : 10,
+                  scrollSnapAlign: "center",
+                }}
+                onClick={() => scrollToCard(index)}
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
+              >
+                <div
+                  className={`bg-zinc-900 rounded-3xl overflow-hidden transition-all duration-500 border ${
+                    index === activeIndex
+                      ? "border-zinc-700 shadow-2xl shadow-red-600/20"
+                      : "border-zinc-800 shadow-lg"
+                  }`}
+                  style={{ minHeight: "480px" }}
+                >
+                  {/* ✅ Two Different Images */}
+                  <div className="grid grid-cols-2 gap-3 p-5">
+                    <div className="rounded-2xl overflow-hidden bg-zinc-800 aspect-4/3">
+                      <img
+                        src={project.beforeImage}
+                        alt={`${project.title} before`}
+                        className="w-full h-full object-cover opacity-70"
+                      />
+                    </div>
+                    <div className="rounded-2xl overflow-hidden bg-zinc-800 aspect-4/3">
+                      <img
+                        src={project.afterImage}
+                        alt={`${project.title} after`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="px-6 pb-6">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 uppercase tracking-tight leading-snug">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm sm:text-base md:text-base leading-relaxed mb-4 sm:mb-6">
+                      {project.snippet}
+                    </p>
+
+                    {/* Footer */}
+                    <div className="flex items-center justify-between pt-4 border-t border-zinc-800">
+                      <div className="flex items-center gap-2">
+                        <div className="w-1 h-8 bg-red-600 rounded-full"></div>
+                        <span className="text-white font-medium text-sm">
+                          {project.category}
+                        </span>
+                      </div>
+                      <button className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition-all duration-300">
+                        <ArrowRight className="group-hover:-rotate-45 transition-transform duration-300" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            <div className="shrink-0 w-[10vw]"></div>
+          </div>
+
+          {/* Pagination Dots */}
+          <div
+            className="flex justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollToCard(index)}
+                className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
+                  index === activeIndex
+                    ? "bg-red-600 w-6 sm:w-8"
+                    : "bg-gray-600 w-1.5 sm:w-2 hover:bg-gray-500"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
+    </div>
+  );
 };
 
 export default HeroCurasol;

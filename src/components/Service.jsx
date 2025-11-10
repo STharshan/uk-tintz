@@ -1,52 +1,61 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const services = [
   {
     name: "Window Tinting",
-    img: "https://framerusercontent.com/images/QCoTSMtHpimr9lp2CmaQOtriXU.png",
+    img: "/s4.jpg",
     link: "/windowtinting",
   },
   {
     name: "Stereo Fitting",
-    img: "https://framerusercontent.com/images/LqURARtPkDasnz8xNZRw6V7LVc.png",
+    img: "s6.jpg",
     link: "/stereofitting",
   },
   {
     name: "Reverse Camera",
-    img: "https://framerusercontent.com/images/ZiSz1ONCwWlZSSTVgpW4sZm1hI.png",
+    img: "s9.jpg",
     link: "/reversecamera",
   },
   {
     name: "Parking Sensors",
-    img: "https://framerusercontent.com/images/H2mFADPlDeJZEZVhsqozg6Yc0.jpg",
+    img: "s17.jpg",
     link: "/parkingsensors",
   },
   {
     name: "Dashcams",
-    img: "https://framerusercontent.com/images/JrDw3jtgKjcQOYfgKW5tggM5U.jpg",
+    img: "s3.jpg",
     link: "/dashcams",
   },
   {
     name: "Commercial Window",
-    img: "https://framerusercontent.com/images/H2mFADPlDeJZEZVhsqozg6Yc0.jpg",
+    img: "s28.jpg",
     link: "/commercialwindow",
   },
   {
     name: "Residential Tinting",
-    img: "https://framerusercontent.com/images/QCoTSMtHpimr9lp2CmaQOtriXU.png",
+    img: "s26.jpg",
     link: "/residentialtinting",
   },
-
 ];
 
 const OurServices = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Animate only once
+      offset: 100, // Trigger point
+    });
+  }, []);
+
   return (
     <section className="w-full bg-black text-white py-20 overflow-x-hidden">
       {/* Heading */}
-      <div className="text-center mb-12">
-        <h2 className="text-yellow-400 text-3xl font-extrabold uppercase mb-3 tracking-wide">
+      <div className="text-center mb-12" data-aos="fade-up">
+        <h2 className="text-red-500 text-3xl font-extrabold uppercase mb-3 tracking-wide">
           Our Services
         </h2>
         <p className="text-gray-300 text-lg max-w-2xl mx-auto">
@@ -56,10 +65,16 @@ const OurServices = () => {
       </div>
 
       {/* Service Cards */}
-      <div className="flex flex-wrap justify-center items-center gap-0 w-full max-w-[1600px] mx-auto overflow-hidden">
+      <div
+        className="flex flex-wrap justify-center items-center gap-0 w-full max-w-[1600px] mx-auto overflow-hidden"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
         {services.map((service, index) => (
           <div
             key={index}
+            data-aos="zoom-in"
+            data-aos-delay={index * 100} // Stagger animation
             className="relative w-1/4 min-w-[300px] h-[550px] transform transition-transform duration-500 hover:scale-[1.03]"
           >
             {/* Image */}
@@ -79,7 +94,7 @@ const OurServices = () => {
               </h3>
               <Link
                 to={service.link}
-                className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-lg uppercase text-sm hover:bg-yellow-500 transition-colors duration-300"
+                className="bg-red-500 text-black font-semibold px-6 py-3 rounded-lg uppercase text-sm hover:bg-red-600 transition-colors duration-300"
               >
                 Learn More
               </Link>

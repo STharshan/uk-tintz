@@ -8,6 +8,7 @@ import ResidentialTinting from "./pages/ResidentialTinting";
 import ReverseCamera from "./pages/ReverseCamera";
 import StereoFitting from "./pages/StereoFitting";
 import WindowTinting from "./pages/WindowTinting";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -23,8 +24,8 @@ function App() {
         <Route path="/reversecamera" element={<ReverseCamera />} />
         <Route path="/stereofitting" element={<StereoFitting />} />
         <Route path="/windowtinting" element={<WindowTinting />} />
-      
       </Routes>
+      <Footer />
     </Router>
   );
 }

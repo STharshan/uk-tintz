@@ -1,0 +1,106 @@
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+const BRAND_GOLD = 'red'; // your logo color
+
+const images = [
+    '/s10.jpg',
+    '/s11.jpg',
+    '/s12.jpg',
+    '/s13.jpg',
+    '/s14.jpg',
+    '/s15.jpg',
+    '/s16.jpg',
+    '/s17.jpg',
+    '/s18.jpg',
+    '/s21.jpg',
+    '/s20.jpg',
+];
+
+export default function GallerySlider() {
+
+    // ✅ Initialize AOS
+    useEffect(() => {
+        setTimeout(() => {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100,
+                easing: 'ease-in-out',
+            });
+        }, 500); // wait 0.5 seconds before initializing
+    }, []);
+
+    return (
+        <section
+            className="transition-colors duration-700 bg-black py-10 px-4"
+            data-aos="fade-up"
+        >
+            <div className="max-w-6xl mx-auto">
+                {/* Section Title */}
+                <h2
+                    className="text-3xl md:text-4xl font-bold text-center mb-8 underline underline-offset-8px text-red-500"
+                    data-aos="fade-down"
+                >
+                    UK Tintz Gallery
+                </h2>
+
+                {/* Swiper Gallery */}
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <Swiper
+                        modules={[Navigation, Pagination]}
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        navigation
+                        pagination={{ clickable: true }}
+                        breakpoints={{
+                            640: { slidesPerView: 1 },
+                            768: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3 },
+                        }}
+                        className="rounded-xl"
+                    >
+                        {images.map((src, idx) => (
+                            <SwiperSlide key={idx}>
+                                <div className="overflow-hidden rounded-xl shadow-md border transition-colors duration-500">
+                                    <img
+                                        src={src}
+                                        alt={`Gallery Image ${idx + 1}`}
+                                        className="w-full h-[350px] object-cover"
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </div>
+
+            {/* Swiper Styles */}
+            <style jsx global>{`
+        .swiper-pagination-bullet {
+            background: #CFCFCF;
+          opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+          background: ${BRAND_GOLD} !important;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: ${BRAND_GOLD} !important;
+        }
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+          color: ${'#C99A2C'} !important;
+        }
+      `}</style>
+        </section>
+    );
+}
