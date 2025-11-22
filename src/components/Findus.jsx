@@ -38,7 +38,7 @@ export default function FindUs() {
 
         {/* Google Map */}
         <div
-          className="rounded-xl overflow-hidden shadow-lg border border-gray-700 w-full h-[400px]"
+          className="rounded-xl overflow-hidden shadow-lg border border-red-500/20 w-full h-[400px]"
           data-aos="zoom-in-up"
           data-aos-delay="400"
         >

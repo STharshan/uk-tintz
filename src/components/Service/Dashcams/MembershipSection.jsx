@@ -44,7 +44,7 @@ export default function MembershipSection() {
     <section className="py-20 bg-white text-center font-['Inter']">
       {/* Section Header */}
       <p className="text-[#376131] text-sm font-medium mb-3">Membership</p>
-      <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+      <h2 className="text-3xl md:text-5xl font-bold text-[#111111] mb-6">
         Your path to peak{" "}
         <span className="font-extrabold">physical and mental performance.</span>
       </h2>
@@ -93,7 +93,7 @@ export default function MembershipSection() {
                   /month
                 </span>
               </div>
-              <p className="text-gray-700 text-sm mb-6">{plan.description}</p>
+              <p className="text-red-500/20 text-sm mb-6">{plan.description}</p>
 
               <ul className="text-left space-y-3 text-gray-800">
                 {plan.features.map((f, idx) => (

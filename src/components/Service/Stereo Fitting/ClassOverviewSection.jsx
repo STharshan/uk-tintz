@@ -34,7 +34,7 @@ export default function ClassOverviewSection() {
           {/* Text Column */}
           <div className="flex flex-col gap-8">
             {/* Key Benefits */}
-            <div className="bg-gray-900 border border-red-500/20 rounded-xl shadow-sm p-8">
+            <div className="bg-[#111111] border border-red-500/20 rounded-xl shadow-sm p-8">
               <h3 className="text-[20px] font-semibold text-red-500 mb-5">
                 Key Benefits
               </h3>
@@ -49,7 +49,7 @@ export default function ClassOverviewSection() {
             </div>
 
             {/* Who This Service Is Perfect For */}
-            <div className="bg-gray-900 border border-red-500/20 rounded-xl shadow-sm p-8">
+            <div className="bg-[#111111] border border-red-500/20 rounded-xl shadow-sm p-8">
               <h3 className="text-[20px] font-semibold text-red-500 mb-5">
                 Who This Service Is Perfect For
               </h3>

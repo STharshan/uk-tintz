@@ -97,7 +97,7 @@ const Navbar = () => {
               smooth
               to={item.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-2 text-gray-200 hover:text-red-500 border-b border-gray-700 last:border-0 transition-colors"
+              className="block py-2 text-gray-200 hover:text-red-500 border-b border-red-500/20 last:border-0 transition-colors"
             >
               {item.name}
             </HashLink>
