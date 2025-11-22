@@ -3,30 +3,20 @@ import React from "react";
 
 export default function ClassOverviewSection() {
   return (
-    <section className="bg-white py-20 px-6 md:px-12">
+    <section className="bg-black py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
         {/* 🧠 Top Section */}
         <div className="mb-12 pe-0 md:pe-90">
-          <h2 className="text-[36px] md:text-[40px] font-semibold text-[#111827] mb-6">
-            Class Overview
+          <h2 className="text-[36px] md:text-[40px] font-semibold text-red-500 mb-6">
+            Service Overview
           </h2>
 
-          <div className="space-y-5 text-[16px] leading-[1.8] text-[#1f2937]">
+          <div className="space-y-5 text-[16px] leading-[1.8] text-gray-300">
             <p>
-              Our Agility & Quickness Drills class is built to elevate your
-              athleticism by improving reaction time, directional changes, and
-              multi-directional speed. Through ladder drills, cone work, and
-              cognitive reaction exercises, you’ll sharpen your footwork and
-              enhance your ability to change direction with precision and
-              control.
+              Our Window Tinting Service is designed to elevate your vehicle’s comfort, appearance, and protection. By using high-quality films and precision installation techniques, we ensure a flawless finish that enhances privacy, reduces heat, and protects your interior from harmful UV rays. From shade selection to expert application, every step is carried out with accuracy and attention to detail.
             </p>
             <p>
-              This class blends physical and neurological training, helping you
-              develop faster reflexes and superior body awareness on and off the
-              field. Whether you’re an athlete preparing for high-level
-              competition or someone seeking to move more efficiently, this
-              class will challenge your mind-muscle connection and improve your
-              coordination.
+              This service blends craftsmanship and modern technology, giving your vehicle a cleaner aesthetic while improving long-term durability. Whether you’re looking for a sleek, premium look or improved cabin comfort, our tinting service delivers consistent, high-level results you’ll feel every time you drive.
             </p>
           </div>
         </div>
@@ -36,48 +26,32 @@ export default function ClassOverviewSection() {
           {/* 🔹 Text Column */}
           <div className="flex flex-col gap-8">
             {/* Key Benefits */}
-            <div className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-xl shadow-sm p-8">
-              <h3 className="text-[20px] font-semibold text-[#111827] mb-5">
+            <div className="bg-gray-900 border border-gray-700 rounded-xl shadow-sm p-8">
+              <h3 className="text-[20px] font-semibold text-red-500 mb-5">
                 Key Benefits
               </h3>
-              <ul className="space-y-3 list-disc list-inside text-[#374151]">
-                <li>Enhance agility and reactive speed</li>
-                <li>Improve balance and proprioception</li>
-                <li>Increase acceleration and deceleration control</li>
-                <li>Boost coordination and body control under fatigue</li>
-                <li>
-                  Strengthen ankle, knee, and hip stabilizers to prevent injuries
-                </li>
-                <li>
-                  Improve cognitive focus and split-second decision-making
-                </li>
+              <ul className="space-y-3 list-disc list-inside text-gray-300">
+                <li>Reduce interior heat and create a cooler driving environment</li>
+                <li>Block up to 99% of harmful UV rays to protect skin and interiors</li>
+                <li>Increase privacy without sacrificing visibility</li>
+                <li>Prevent fading, cracking, and sun damage to upholstery and dashboard</li>
+                <li>Enhance vehicle appearance with a clean, premium finish</li>
+                <li>Improve safety by reducing glare and strengthening glass structure</li>
               </ul>
             </div>
 
-            {/* Who This Program Is Perfect For */}
-            <div className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-xl shadow-sm p-8">
-              <h3 className="text-[20px] font-semibold text-[#111827] mb-5">
-                Who This Program Is Perfect For
+            {/* Who This Service Is Perfect For */}
+            <div className="bg-gray-900 border border-gray-700 rounded-xl shadow-sm p-8">
+              <h3 className="text-[20px] font-semibold text-red-500 mb-5">
+                Who This Service Is Perfect For
               </h3>
-              <ul className="space-y-3 list-disc list-inside text-[#374151]">
-                <li>
-                  Competitive athletes in sports like soccer, basketball, tennis,
-                  and football
-                </li>
-                <li>
-                  Youth athletes developing foundational athletic skills
-                </li>
-                <li>
-                  Weekend warriors and general fitness clients wanting to move
-                  better
-                </li>
-                <li>
-                  Coaches and teams looking for advanced agility programming
-                </li>
-                <li>
-                  Anyone aiming to enhance speed and agility for daily activities
-                  or sports
-                </li>
+              <ul className="space-y-3 list-disc list-inside text-gray-300">
+                <li>Drivers who want a sleek, stylish upgrade to their vehicle’s appearance</li>
+                <li>Anyone looking to reduce glare and increase driving comfort</li>
+                <li>Families wanting added UV protection for children and passengers</li>
+                <li>Car enthusiasts who prefer a customised, premium aesthetic</li>
+                <li>Professionals who want more privacy and reduced visibility into their vehicle</li>
+                <li>Owners looking to protect and preserve their interior for long-term value</li>
               </ul>
             </div>
           </div>
@@ -85,8 +59,8 @@ export default function ClassOverviewSection() {
           {/* 🔹 Image Column */}
           <div className="rounded-xl overflow-hidden shadow-md h-full flex items-stretch">
             <img
-              src="https://framerusercontent.com/images/B22DbI7v97CFuGsS7OSuqRjI.jpg"
-              alt="Athlete training"
+              src="uk1.png"
+              alt="Vehicle Tinting"
               className="w-full h-full object-cover"
             />
           </div>

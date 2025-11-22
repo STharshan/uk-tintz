@@ -2,13 +2,14 @@ import InnerBannerSection from "../components/Service/Commercial Window/InnerBan
 import ClassOverviewSection from "../components/Service/Commercial Window/ClassOverviewSection"
 import MembershipSection from "../components/Service/Commercial Window/MembershipSection"
 import LimitedTimeOffer from "../components/Service/Commercial Window/LimitedTimeOffer"
+
 const Commercialwindow = () => {
     return (
         <div>
-     <InnerBannerSection />
-     <ClassOverviewSection />
-     <MembershipSection />
-     <LimitedTimeOffer />
+            <InnerBannerSection />
+            <ClassOverviewSection />
+            {/* <MembershipSection />
+            <LimitedTimeOffer /> */}
         </div>
     )
 }

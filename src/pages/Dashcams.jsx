@@ -5,10 +5,10 @@ import LimitedTimeOffer from "../components/Service/Dashcams/LimitedTimeOffer"
 const Dashcams = () => {
     return (
         <div>
-     <InnerBannerSection />
-     <ClassOverviewSection />
-     <MembershipSection />
-     <LimitedTimeOffer />
+            <InnerBannerSection />
+            <ClassOverviewSection />
+            {/* <MembershipSection />
+            <LimitedTimeOffer /> */}
         </div>
     )
 }

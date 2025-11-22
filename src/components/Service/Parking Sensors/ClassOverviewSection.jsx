@@ -5,88 +5,62 @@ export default function ClassOverviewSection() {
   return (
     <section className="bg-white py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
-        {/* 🧠 Top Section */}
-        <div className="mb-12 pe-0 md:pe-90">
+        {/* Top Section */}
+        <div className="mb-12 md:pr-20">
           <h2 className="text-[36px] md:text-[40px] font-semibold text-[#111827] mb-6">
-            Class Overview
+            Service Overview
           </h2>
 
-          <div className="space-y-5 text-[16px] leading-[1.8] text-[#1f2937]">
+          <div className="space-y-5 text-[16px] md:text-[17px] leading-relaxed text-[#1f2937]">
             <p>
-              Our Agility & Quickness Drills class is built to elevate your
-              athleticism by improving reaction time, directional changes, and
-              multi-directional speed. Through ladder drills, cone work, and
-              cognitive reaction exercises, you’ll sharpen your footwork and
-              enhance your ability to change direction with precision and
-              control.
+              Our Parking Sensor Installation Service is designed to give you greater confidence and safety while manoeuvring in tight spaces. Using high-quality ultrasonic sensors and precise installation techniques, we ensure accurate distance detection and seamless integration with your vehicle. From selecting the right sensor setup to clean wiring and factory-style placement, every detail is handled with professional care.
             </p>
             <p>
-              This class blends physical and neurological training, helping you
-              develop faster reflexes and superior body awareness on and off the
-              field. Whether you’re an athlete preparing for high-level
-              competition or someone seeking to move more efficiently, this
-              class will challenge your mind-muscle connection and improve your
-              coordination.
+              This service combines modern safety technology with expert automotive installation, giving you clearer spatial awareness, reduced reversing risks, and a smoother parking experience. Whether you drive a compact car or a large van, our parking sensors provide reliable, real-time alerts to help you avoid obstacles with ease.
             </p>
           </div>
         </div>
 
-        {/* ⚡ Grid Section */}
+        {/* Grid Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          {/* 🔹 Text Column */}
+          {/* Text Column */}
           <div className="flex flex-col gap-8">
             {/* Key Benefits */}
-            <div className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-xl shadow-sm p-8">
+            <div className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
               <h3 className="text-[20px] font-semibold text-[#111827] mb-5">
                 Key Benefits
               </h3>
               <ul className="space-y-3 list-disc list-inside text-[#374151]">
-                <li>Enhance agility and reactive speed</li>
-                <li>Improve balance and proprioception</li>
-                <li>Increase acceleration and deceleration control</li>
-                <li>Boost coordination and body control under fatigue</li>
-                <li>
-                  Strengthen ankle, knee, and hip stabilizers to prevent injuries
-                </li>
-                <li>
-                  Improve cognitive focus and split-second decision-making
-                </li>
+                <li>Improve parking accuracy and reduce collision risks</li>
+                <li>Ultrasonic sensors detect obstacles not visible in mirrors</li>
+                <li>Audio and visual alerts for safer manoeuvring</li>
+                <li>Clean installation with factory-style finish</li>
+                <li>Perfect for tight streets, car parks, and driveways</li>
+                <li>Boost overall vehicle safety and driver confidence</li>
               </ul>
             </div>
 
-            {/* Who This Program Is Perfect For */}
-            <div className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-xl shadow-sm p-8">
+            {/* Who This Service Is Perfect For */}
+            <div className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
               <h3 className="text-[20px] font-semibold text-[#111827] mb-5">
-                Who This Program Is Perfect For
+                Who This Service Is Perfect For
               </h3>
               <ul className="space-y-3 list-disc list-inside text-[#374151]">
-                <li>
-                  Competitive athletes in sports like soccer, basketball, tennis,
-                  and football
-                </li>
-                <li>
-                  Youth athletes developing foundational athletic skills
-                </li>
-                <li>
-                  Weekend warriors and general fitness clients wanting to move
-                  better
-                </li>
-                <li>
-                  Coaches and teams looking for advanced agility programming
-                </li>
-                <li>
-                  Anyone aiming to enhance speed and agility for daily activities
-                  or sports
-                </li>
+                <li>Drivers who park in tight or busy areas</li>
+                <li>New drivers wanting added safety and reversing support</li>
+                <li>Owners of vans, SUVs, and long vehicles with limited visibility</li>
+                <li>Families seeking extra protection in driveways and school zones</li>
+                <li>Businesses and fleet owners looking to reduce parking damage</li>
+                <li>Anyone wanting a simple upgrade to enhance safety</li>
               </ul>
             </div>
           </div>
 
-          {/* 🔹 Image Column */}
-          <div className="rounded-xl overflow-hidden shadow-md h-full flex items-stretch">
+          {/* Image Column */}
+          <div className="rounded-2xl overflow-hidden shadow-xl flex items-stretch h-full hover:scale-105 transition-transform duration-500">
             <img
-              src="https://framerusercontent.com/images/B22DbI7v97CFuGsS7OSuqRjI.jpg"
-              alt="Athlete training"
+              src="s4.jpg"
+              alt="Parking Sensor Installation"
               className="w-full h-full object-cover"
             />
           </div>

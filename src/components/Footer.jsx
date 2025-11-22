@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -19,12 +20,12 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                // href="https://www.facebook.com/people/RS-Mobile-Services/100092690151352/"
+                 href="https://www.instagram.com/uktintz/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
               >
-                <FaFacebookF
+                <FiInstagram
                   className="text-gray-400 hover:text-blue-600 cursor-pointer transition-colors duration-300"
                   size={20}
                 />
