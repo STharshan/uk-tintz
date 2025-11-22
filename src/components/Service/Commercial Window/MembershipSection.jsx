@@ -89,7 +89,7 @@ export default function MembershipSection() {
                 <span className="text-4xl font-bold text-[#1A311F]">
                   ${plan.price}
                 </span>
-                <span className="text-gray-600 ml-1 text-sm mb-[4px]">
+                <span className="text-gray-600 ml-1 text-sm mb-1">
                   /month
                 </span>
               </div>
