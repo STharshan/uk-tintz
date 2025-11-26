@@ -79,7 +79,7 @@ export default function FitnessInspirationSection() {
 
         {/* INSTAGRAM ICON (Centered always + 2px up) */}
         <a
-          href="https://instagram.com/YOUR_USERNAME"
+          href="https://www.instagram.com/uktintz/"
           target="_blank"
           className="translate-y-[-2px]"
           data-aos="zoom-in"
