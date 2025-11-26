@@ -1,9 +1,19 @@
 import React from "react";
-import { FaFacebookF, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const servicesLinks = [
+    { name: "Window Tinting", path: "/windowtinting" },
+    { name: "Stereo Fitting", path: "/stereofitting" },
+    { name: "Reverse Camera Fitting", path: "/reversecamera" },
+    { name: "Parking Sensors", path: "/parkingsensors" },
+    { name: "Dashcams", path: "/dashcams" },
+    { name: "Commercial Window Tinting", path: "/commercialwindow" },
+    { name: "Residential Tinting", path: "/residentialtinting" },
+  ];
+
   return (
     <footer className="bg-black border-t border-gray-800 py-12">
       <div className="container mx-auto px-4 md:px-12">
@@ -16,14 +26,15 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-400 mb-4 mt-3 leading-relaxed">
-             A trusted name in tinting for decades — delivering excellence across the Midlands and beyond.
+              A trusted name in tinting for decades — delivering excellence
+              across the Midlands and beyond.
             </p>
             <div className="flex space-x-4">
               <a
-                 href="https://www.instagram.com/uktintz/"
+                href="https://www.instagram.com/uktintz/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook"
+                aria-label="Instagram"
               >
                 <FiInstagram
                   className="text-gray-400 hover:text-blue-600 cursor-pointer transition-colors duration-300"
@@ -39,19 +50,14 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-2 text-gray-400">
-              {[
-                "Window Tinting",
-                "Stereo fitting",
-                "Reverse camera fitting",
-                "Parking sensors",
-                "Dashcams",
-                "Commercial window tinting",
-                "Residential tinting"
-              ].map((service, index) => (
+              {servicesLinks.map((service, index) => (
                 <li key={index}>
-                  <a href="#services" className="hover:text-white transition-colors duration-300">
-                    {service}
-                  </a>
+                  <Link
+                    to={service.path}
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -78,7 +84,7 @@ export default function Footer() {
               <li className="flex items-center space-x-3">
                 <FaPhoneAlt className="text-red-500" size={18} />
                 <a
-                  href="tel: 07506 717 961"
+                  href="tel:07506717961"
                   className="hover:text-white transition-colors duration-300"
                 >
                   07506 717 961
@@ -105,7 +111,6 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-2 flex flex-col sm:flex-row justify-center items-center gap-3 text-center font-semibold text-gray-400">
-          {/* Left: Terms & Privacy */}
           <div className="flex gap-4 text-sm">
             <Link
               to="/terms"
@@ -122,7 +127,6 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Center: Powered by Ansely (unchanged) */}
           <p className="text-center font-semibold text-gray-400">
             Powered by{" "}
             <a

@@ -10,6 +10,9 @@ import WindowTinting from "./pages/WindowTinting";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
+import TermsConditions from "./components/Term";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import GDPRConsent from "./components/GDPRButton";
 
 
 function App() {
@@ -26,8 +29,11 @@ function App() {
         <Route path="/dashcams" element={<Dashcams />} />
         <Route path="/commercialwindow" element={<Commercialwindow />} />
         <Route path="/residentialtinting" element={<ResidentialTinting />} />
+        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
+      <GDPRConsent />
     </Router>
   );
 }

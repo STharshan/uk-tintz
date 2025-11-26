@@ -6,12 +6,12 @@ export default function ClassOverviewSection() {
     <section className="bg-black py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
         {/* Top Section */}
-        <div className="mb-12 pe-0 md:pe-90">
+        <div className="mb-12 text-center">
           <h2 className="text-[36px] md:text-[40px] font-semibold text-red-500 mb-6">
             Service Overview
           </h2>
 
-          <div className="space-y-5 text-[16px] leading-[1.8] text-gray-300">
+          <div className="space-y-5 text-[16px] leading-[1.8] max-w-4xl mx-auto text-gray-300">
             <p>
               Our Commercial Window Tinting Service is designed to enhance your building’s comfort, privacy, and energy efficiency. Using high-performance architectural films and precision installation techniques, we provide a flawless finish that reduces heat, blocks harmful UV rays, and improves the appearance of any workspace. From offices and shopfronts to warehouses and retail units, every project is completed with accuracy and long-lasting quality.
             </p>

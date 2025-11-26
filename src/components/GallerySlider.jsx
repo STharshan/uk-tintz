@@ -41,7 +41,8 @@ export default function GallerySlider() {
 
     return (
         <section
-            className="transition-colors duration-700 bg-black py-10 px-4"
+            id='gallery'
+            className="transition-colors scroll-m-20 duration-700 bg-black py-10 px-4"
             data-aos="fade-up"
         >
             <div className="max-w-6xl mx-auto">
