@@ -1,12 +1,31 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const HeroCurasol = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const scrollContainerRef = useRef(null);
+
+  // ⭐ Popup State
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupImages, setPopupImages] = useState([]);
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const openPopup = (project) => {
+    setPopupImages([project.beforeImage, project.afterImage]);
+    setSlideIndex(0);
+    setShowPopup(true);
+  };
+
+  const closePopup = () => setShowPopup(false);
+
+  const nextSlide = () =>
+    setSlideIndex((slideIndex + 1) % popupImages.length);
+
+  const prevSlide = () =>
+    setSlideIndex((slideIndex - 1 + popupImages.length) % popupImages.length);
 
   useEffect(() => {
     AOS.init({
@@ -144,7 +163,7 @@ const HeroCurasol = () => {
       data-aos="fade-up"
     >
       <div className="max-w-7xl mx-auto p-6">
-        {/* Header Section */}
+        {/* Header */}
         <div data-aos="fade-down">
           <p className="text-xs sm:text-sm text-center text-gray-400 uppercase tracking-wider">
             Our Projects
@@ -196,19 +215,19 @@ const HeroCurasol = () => {
                   }`}
                   style={{ minHeight: "480px" }}
                 >
-                  {/* ✅ Two Different Images */}
+                  {/* Images */}
                   <div className="grid grid-cols-2 gap-3 p-5">
                     <div className="rounded-2xl overflow-hidden bg-zinc-800 aspect-4/3">
                       <img
                         src={project.beforeImage}
-                        alt={`${project.title} before`}
+                        alt=""
                         className="w-full h-full object-cover opacity-70"
                       />
                     </div>
                     <div className="rounded-2xl overflow-hidden bg-zinc-800 aspect-4/3">
                       <img
                         src={project.afterImage}
-                        alt={`${project.title} after`}
+                        alt=""
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -231,7 +250,15 @@ const HeroCurasol = () => {
                           {project.category}
                         </span>
                       </div>
-                      <button className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition-all duration-300">
+
+                      {/* ⭐ OPEN POPUP ON CLICK */}
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openPopup(project);
+                        }}
+                        className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition-all duration-300"
+                      >
                         <ArrowRight className="group-hover:-rotate-45 transition-transform duration-300" />
                       </button>
                     </div>
@@ -243,7 +270,7 @@ const HeroCurasol = () => {
             <div className="shrink-0 w-[10vw]"></div>
           </div>
 
-          {/* Pagination Dots */}
+          {/* Pagination */}
           <div
             className="flex justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8"
             data-aos="fade-up"
@@ -263,6 +290,60 @@ const HeroCurasol = () => {
           </div>
         </div>
       </div>
+
+     {/* ⭐ POPUP MODAL — Image Slider */}
+{showPopup && (
+  <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-6">
+    <div className="relative w-full max-w-2xl bg-zinc-900 rounded-2xl overflow-visible shadow-xl border border-zinc-700">
+
+      {/* Close Button - Always Visible */}
+      <button
+        onClick={closePopup}
+        className="absolute -top-4 -right-4 z-50 bg-white text-black p-3 rounded-full shadow-xl hover:bg-gray-200"
+      >
+        <X size={22} />
+      </button>
+
+      {/* Slider */}
+      <div className="relative w-full h-[380px] sm:h-[450px] bg-black flex items-center justify-center rounded-t-2xl overflow-hidden">
+        <img
+          src={popupImages[slideIndex]}
+          alt="slide"
+          className="w-full h-full object-cover"
+        />
+
+        {/* Prev */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-3 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full z-40"
+        >
+          <ChevronLeft size={28} />
+        </button>
+
+        {/* Next */}
+        <button
+          onClick={nextSlide}
+          className="absolute right-3 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full z-40"
+        >
+          <ChevronRight size={28} />
+        </button>
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center gap-2 py-4 bg-zinc-900 rounded-b-2xl">
+        {popupImages.map((_, i) => (
+          <div
+            key={i}
+            className={`h-2 w-2 rounded-full ${
+              slideIndex === i ? "bg-red-600" : "bg-gray-500"
+            }`}
+          ></div>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
 
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
