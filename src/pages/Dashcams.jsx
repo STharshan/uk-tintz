@@ -1,14 +1,15 @@
-import InnerBannerSection from "../components/Service/Dashcams/InnerBannerSection"
-import ClassOverviewSection from "../components/Service/Dashcams/ClassOverviewSection"
-import MembershipSection from "../components/Service/Dashcams/MembershipSection"
-import LimitedTimeOffer from "../components/Service/Dashcams/LimitedTimeOffer"
+
+import ClassOverviewSection from "../components/Common/ClassOverviewSection"
+
+import {DashcamData} from "../Data/Dashcams/InnerBannerData"
+import InnerBannerSectionData from "../components/Common/InnerBannerSection"
 const Dashcams = () => {
     return (
         <div>
-            <InnerBannerSection />
-            <ClassOverviewSection />
-            {/* <MembershipSection />
-            <LimitedTimeOffer /> */}
+         
+            <InnerBannerSectionData data={DashcamData} />
+            <ClassOverviewSection  data={DashcamData} />
+          
         </div>
     )
 }

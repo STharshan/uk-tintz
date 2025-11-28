@@ -1,15 +1,15 @@
-import InnerBannerSection from "../components/Service/Commercial Window/InnerBannerSection"
-import ClassOverviewSection from "../components/Service/Commercial Window/ClassOverviewSection"
-import MembershipSection from "../components/Service/Commercial Window/MembershipSection"
-import LimitedTimeOffer from "../components/Service/Commercial Window/LimitedTimeOffer"
 
+import ClassOverviewSection from "../components/Common/ClassOverviewSection"
+
+import {CommercialWindowData} from "../Data/commercialwindow/InnerBannerData"
+import InnerBannerSectionData from "../components/Common/InnerBannerSection"
 const Commercialwindow = () => {
     return (
         <div>
-            <InnerBannerSection />
-            <ClassOverviewSection />
-            {/* <MembershipSection />
-            <LimitedTimeOffer /> */}
+         
+            <InnerBannerSectionData data={CommercialWindowData} />
+            <ClassOverviewSection  data={CommercialWindowData} />
+          
         </div>
     )
 }

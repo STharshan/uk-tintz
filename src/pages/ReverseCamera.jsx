@@ -1,17 +1,17 @@
-import InnerBannerSection from "../components/Service/Reverse Camera/InnerBannerSection"
-import ClassOverviewSection from "../components/Service/Reverse Camera/ClassOverviewSection"
-import MembershipSection from "../components/Service/Reverse Camera/MembershipSection"
-import LimitedTimeOffer from "../components/Service/Reverse Camera/LimitedTimeOffer"
 
-const ReverseCamera = () => {
+import ClassOverviewSection from "../components/Common/ClassOverviewSection"
+
+import {ReverseCameraData} from "../Data/ReverseCamera/InnerBannerData"
+import InnerBannerSectionData from "../components/Common/InnerBannerSection"
+const  ReverseCamera = () => {
     return (
         <div>
-            <InnerBannerSection />
-            <ClassOverviewSection />
-            {/* <MembershipSection />
-            <LimitedTimeOffer /> */}
+         
+            <InnerBannerSectionData data={ReverseCameraData} />
+            <ClassOverviewSection  data={ReverseCameraData} />
+          
         </div>
     )
 }
 
-export default ReverseCamera
+export default  ReverseCamera

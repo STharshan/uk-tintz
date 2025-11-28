@@ -1,15 +1,15 @@
-import InnerBannerSection from "../components/Service/Residential Tinting/InnerBannerSection"
-import ClassOverviewSection from "../components/Service/Residential Tinting/ClassOverviewSection"
-import MembershipSection from "../components/Service/Residential Tinting/MembershipSection"
-import LimitedTimeOffer from "../components/Service/Residential Tinting/LimitedTimeOffer"
 
+import ClassOverviewSection from "../components/Common/ClassOverviewSection"
+
+import {ResidentialTintingData} from "../Data/ResidentialTinting/InnerBannerData"
+import InnerBannerSectionData from "../components/Common/InnerBannerSection"
 const ResidentialTinting = () => {
     return (
         <div>
-            <InnerBannerSection />
-            <ClassOverviewSection />
-            {/* <MembershipSection />
-            <LimitedTimeOffer /> */}
+         
+            <InnerBannerSectionData data={ResidentialTintingData} />
+            <ClassOverviewSection  data={ResidentialTintingData} />
+          
         </div>
     )
 }

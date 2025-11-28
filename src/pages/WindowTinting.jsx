@@ -1,17 +1,18 @@
-import InnerBannerSection from "../components/Service/Window Tinting/InnerBannerSection"
-import ClassOverviewSection from "../components/Service/Window Tinting/ClassOverviewSection"
-import MembershipSection from "../components/Service/Window Tinting/MembershipSection"
-import LimitedTimeOffer from "../components/Service/Window Tinting/LimitedTimeOffer"
 
-const WindowTinting = () => {
+
+import ClassOverviewSection from "../components/Common/ClassOverviewSection"
+
+import {WindowTintingData} from "../Data/WindowTinting/InnerBannerData"
+import InnerBannerSectionData from "../components/Common/InnerBannerSection"
+const  WindowTinting = () => {
     return (
         <div>
-            <InnerBannerSection />
-            <ClassOverviewSection />
-            {/* <MembershipSection />
-            <LimitedTimeOffer /> */}
+         
+            <InnerBannerSectionData data={WindowTintingData} />
+            <ClassOverviewSection  data={WindowTintingData} />
+          
         </div>
     )
 }
 
-export default WindowTinting
+export default  WindowTinting

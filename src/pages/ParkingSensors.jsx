@@ -1,15 +1,15 @@
-import InnerBannerSection from "../components/Service/Parking Sensors/InnerBannerSection"
-import ClassOverviewSection from "../components/Service/Parking Sensors/ClassOverviewSection"
-import MembershipSection from "../components/Service/Parking Sensors/MembershipSection"
-import LimitedTimeOffer from "../components/Service/Parking Sensors/LimitedTimeOffer"
 
+import ClassOverviewSection from "../components/Common/ClassOverviewSection"
+
+import {ParkingSensorData} from "../Data/Parking Sensors/InnerBannerData"
+import InnerBannerSectionData from "../components/Common/InnerBannerSection"
 const ParkingSensors = () => {
     return (
         <div>
-            <InnerBannerSection />
-            <ClassOverviewSection />
-            {/* <MembershipSection />
-     <LimitedTimeOffer /> */}
+         
+            <InnerBannerSectionData data={ParkingSensorData} />
+            <ClassOverviewSection  data={ParkingSensorData} />
+          
         </div>
     )
 }
