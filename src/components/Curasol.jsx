@@ -13,26 +13,33 @@ const HeroCurasol = () => {
   const [popupImages, setPopupImages] = useState([]);
   const [slideIndex, setSlideIndex] = useState(0);
 
+  // ⭐ OPEN POPUP WITH ALL IMAGES
   const openPopup = (project) => {
-    setPopupImages([project.beforeImage, project.afterImage]);
+    const images = [];
+
+    // Always add beforeImage and afterImage first
+    if (project.beforeImage) images.push(project.beforeImage);
+    if (project.afterImage) images.push(project.afterImage);
+
+    // Then add any extra popup images, avoiding duplicates
+    if (project.popupImage && project.popupImage.length > 0) {
+      project.popupImage.forEach((img) => {
+        if (!images.includes(img)) images.push(img);
+      });
+    }
+
+    setPopupImages(images);
     setSlideIndex(0);
     setShowPopup(true);
   };
 
   const closePopup = () => setShowPopup(false);
-
-  const nextSlide = () =>
-    setSlideIndex((slideIndex + 1) % popupImages.length);
-
+  const nextSlide = () => setSlideIndex((slideIndex + 1) % popupImages.length);
   const prevSlide = () =>
     setSlideIndex((slideIndex - 1 + popupImages.length) % popupImages.length);
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-    });
+    AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
   }, []);
 
   const projects = [
@@ -40,50 +47,63 @@ const HeroCurasol = () => {
       id: "1",
       title: "Automotive Window Tint",
       category: "Sleek Protection",
-      snippet:
-        "The Automotive Window Tint Project focused on enhancing both the comfort and style of our client’s vehicle. By applying premium-grade window films, we reduced glare, improved privacy, and blocked harmful UV rays — all while giving the car a sleek, modern appearance.",
+      snippet: "Enhanced comfort & style by applying premium-grade window films.",
       beforeImage: "/s5.jpg",
       afterImage: "/s24.jpg",
+      popupImage: ["/s5.jpg", "/s24.jpg"],
       link: "/projects/flooring-makeover-project",
     },
     {
       id: "2",
       title: "Commercial Window Tint",
       category: "Professional Clarity",
-      snippet:
-        "The Commercial Window Tint Project was designed to elevate workplace efficiency and protection. Our installation reduced heat and glare across office spaces, cutting energy costs and creating a more comfortable working environment. The tinting also provided an added layer of privacy and security, ensuring both practicality and professional appeal.",
+      snippet: "Reduce glare and heat while improving privacy and security.",
       beforeImage: "/s27.jpg",
       afterImage: "/s28.jpg",
+      popupImage: ["/s27.jpg", "/s28.jpg"],
       link: "/projects/fixture-fixer-operation",
     },
     {
       id: "3",
       title: "Car Vinyl Wrap",
       category: "Custom Expression",
-      snippet:
-        "The Car Vinyl Wrap Project transformed the vehicle’s entire look, reflecting the client’s personality and brand identity. Using high-quality, durable vinyl, we achieved a flawless finish that not only enhanced aesthetics but also protected the original paintwork from scratches and sun damage.",
+      snippet: "Transform your vehicle with high-quality, durable vinyl.",
       beforeImage: "/s1.jpg",
       afterImage: "/s13.jpg",
+      popupImage: ["/s1.jpg", "/s13.jpg"],
       link: "/projects/renovation-revamp-venture",
     },
     {
       id: "4",
       title: "Interior Dash Vinyl Wrap",
       category: "Refined Detail",
-      snippet:
-        "The Interior Dash Vinyl Wrap Project brought a refined touch to the vehicle’s cabin, combining durability with design precision. We wrapped key interior panels with textured or glossy finishes, upgrading the look and feel of the dashboard while safeguarding it from everyday wear and tear.",
+      snippet: "Dashboard wrapped with textured and glossy finishes.",
       beforeImage: "/s5.jpg",
       afterImage: "/s6.jpg",
+      popupImage: [
+        "/s5.jpg",
+        "/s6.jpg",
+       
+      ],
       link: "/projects/carpentry-solutions-project",
     },
     {
       id: "5",
       title: "Residential Window Tint",
       category: "Comfort Living",
-      snippet:
-        "The Residential Window Tint Project focused on improving home comfort, privacy, and energy efficiency. By applying high-performance tint films to household windows, we reduced heat buildup, minimised glare, and protected interiors from harmful UV rays — all while maintaining clear, natural light.",
+      snippet: "Improve home comfort, privacy, and energy efficiency.",
       beforeImage: "/s26.jpg",
       afterImage: "/s23.jpg",
+       popupImage: [
+        "/s26.jpg",
+        "/s23.jpg",
+        "/r1.jpeg",
+        "/r2.jpeg",
+        "/r3.jpeg",
+        "/r4.jpeg",
+        "/r5.jpeg",
+        "/r6.jpeg",
+      ],
       link: "/projects/electrical-upgrade-initiative",
     },
   ];
@@ -151,8 +171,7 @@ const HeroCurasol = () => {
     return () => {
       container.removeEventListener("scroll", handleScroll);
       clearTimeout(initialDelay);
-      if (container.autoScrollInterval)
-        clearInterval(container.autoScrollInterval);
+      if (container.autoScrollInterval) clearInterval(container.autoScrollInterval);
     };
   }, []);
 
@@ -251,7 +270,6 @@ const HeroCurasol = () => {
                         </span>
                       </div>
 
-                      {/* ⭐ OPEN POPUP ON CLICK */}
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
@@ -271,11 +289,7 @@ const HeroCurasol = () => {
           </div>
 
           {/* Pagination */}
-          <div
-            className="flex justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
+          <div className="flex justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8">
             {projects.map((_, index) => (
               <button
                 key={index}
@@ -291,59 +305,51 @@ const HeroCurasol = () => {
         </div>
       </div>
 
-     {/* ⭐ POPUP MODAL — Image Slider */}
-{showPopup && (
-  <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-6">
-    <div className="relative w-full max-w-2xl bg-zinc-900 rounded-2xl overflow-visible shadow-xl border border-zinc-700">
+      {/* ⭐ POPUP MODAL */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-6">
+          <div className="relative w-full max-w-2xl bg-zinc-900 rounded-2xl overflow-visible shadow-xl border border-zinc-700">
+            <button
+              onClick={closePopup}
+              className="absolute -top-4 -right-4 z-50 bg-white text-black p-3 rounded-full shadow-xl hover:bg-gray-200"
+            >
+              <X size={22} />
+            </button>
 
-      {/* Close Button - Always Visible */}
-      <button
-        onClick={closePopup}
-        className="absolute -top-4 -right-4 z-50 bg-white text-black p-3 rounded-full shadow-xl hover:bg-gray-200"
-      >
-        <X size={22} />
-      </button>
+            <div className="relative w-full h-[380px] sm:h-[450px] bg-black flex items-center justify-center rounded-t-2xl overflow-hidden">
+              <img
+                src={popupImages[slideIndex]}
+                alt="slide"
+                className="w-full h-full object-cover"
+              />
 
-      {/* Slider */}
-      <div className="relative w-full h-[380px] sm:h-[450px] bg-black flex items-center justify-center rounded-t-2xl overflow-hidden">
-        <img
-          src={popupImages[slideIndex]}
-          alt="slide"
-          className="w-full h-full object-cover"
-        />
+              <button
+                onClick={prevSlide}
+                className="absolute left-3 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full z-40"
+              >
+                <ChevronLeft size={28} />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-3 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full z-40"
+              >
+                <ChevronRight size={28} />
+              </button>
+            </div>
 
-        {/* Prev */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-3 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full z-40"
-        >
-          <ChevronLeft size={28} />
-        </button>
-
-        {/* Next */}
-        <button
-          onClick={nextSlide}
-          className="absolute right-3 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full z-40"
-        >
-          <ChevronRight size={28} />
-        </button>
-      </div>
-
-      {/* Dots */}
-      <div className="flex justify-center gap-2 py-4 bg-zinc-900 rounded-b-2xl">
-        {popupImages.map((_, i) => (
-          <div
-            key={i}
-            className={`h-2 w-2 rounded-full ${
-              slideIndex === i ? "bg-red-600" : "bg-gray-500"
-            }`}
-          ></div>
-        ))}
-      </div>
-    </div>
-  </div>
-)}
-
+            <div className="flex justify-center gap-2 py-4 bg-zinc-900 rounded-b-2xl">
+              {popupImages.map((_, i) => (
+                <div
+                  key={i}
+                  className={`h-2 w-2 rounded-full ${
+                    slideIndex === i ? "bg-red-600" : "bg-gray-500"
+                  }`}
+                ></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
