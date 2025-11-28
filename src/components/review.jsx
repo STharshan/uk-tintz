@@ -34,32 +34,33 @@ export default function Review() {
     return () => ctx.revert();
   }, []);
 
-  const testimonials = [
-    {
-      text: "Marvellous food and service. Could not recommend enough. Both the lamb and chicken were on point. The dhaal too. Starters hit the spot and the mains filled the stomachs to content. Excellent variety with no drop in quality between the dishes. As a Bengali myself, I appreciate how Authentic and well cooked these dishes were, not many chefs can produce such food and give you that 'home' comfort feeling.",
-      name: "Hussain Gani",
-      initials: "H",
-      bg: "#BCFFBB",
-    },
-    {
-      text: "We live in the village and our friends and ourselves frequently eat at Harrisons Spice, either in the restaurant or takeaway. The team are super friendly and helpful and the food is always absolutely excellent. We are foodies and it still surprises us how good it is, time after time. It is our go to place for big parties, special occasions, date night and family meals. Being a bring your own makes it even better! We are very lucky to have this gem of a restaurant in our village. Thanks to Tulle and the team.",
-      name: "Paul Hope",
-      initials: "PH",
-      bg: "#BBD2FF",
-    },
-    {
-      text: "Fantastic all round experience. Booked last minute and with a bit of juggling of our time they squeezed us in. Greeted warmly and friendly. Had one with peanut allergy and was told confidently no peanuts on site. Poppadoms and pickle tray to start lime pickle was amazing. We ordered 6 different curries so we could all try each otheral and they were all wonderful, succulent chicken, tender lamb, huge king prawns and omg the paneer was amazing.",
-      name: "Pamela Tilley",
-      initials: "PT",
-      bg: "#F5FFBB",
-    },
-    {
-      text: "Really good food. Myself and my friends walked in. Service was friendly and fast. Good value and the atmosphere was great . Will See you again soon.",
-      name: "Dan Brookes",
-      initials: "DB",
-      bg: "#FFBBF0",
-    },
-  ];
+ const testimonials = [
+  {
+    text: "I’ve had multiple cars tinted with UkTints and the service is always great! They have always got me booked in within a timely manner and I’m always satisfied with the end results! Prices are fair. Communication is great. I would highly recommend and I wouldn’t take my cars anywhere else personally! Thank you UKTints and Pete and keep up the good work 👊🏻",
+    name: "Louise Knight",
+    initials: "LK",
+    bg: "#FFD7D7",
+  },
+  {
+    text: "Great service, had my fiesta tinted and also a sunstrip fitted. Pete did a great job and its truly changed the look of my car, very professional and allowed me to wait while it was done. Would definitely recommend - thankyou very much",
+    name: "Emma Attaway-Smith",
+    initials: "EAS",
+    bg: "#D7FFD7",
+  },
+  {
+    text: "Great Job, highly recommend, quick turnaround, helpful / knowledgeable, Rear windows / sunstrip, cheers 🙌",
+    name: "Lance Ash",
+    initials: "LA",
+    bg: "#D7E0FF",
+  },
+  {
+    text: "Excellent service and great value for money. Been to Pete for a few of my cars now and always does an outstanding job. Highly recommend 👌",
+    name: "Katy Smith",
+    initials: "KS",
+    bg: "#FFF5D7",
+  },
+];
+
 
   return (
     <section
@@ -113,11 +114,11 @@ export default function Review() {
       {/* === CTA BUTTON TO GOOGLE REVIEWS === */}
       <div className="relative z-10 pb-28 text-center">
         <a
-          href="https://www.google.com/search?sca_esv=cb427c73f925e7d3&rlz=1C5CHFA_enCA1132CA1132&sxsrf=AE3TifNP1hfnOUI-vDbstuSqJ_1SgFsKWA:1764250864617&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E5UMQSIpzR6CcUH4NJtD0qduShT0hwUWz22zNi5zwvrrL9rGE4VMMjyk4LFbaG_SBI1HGyIDoRbuBHyHKOQzEwxE9Png&q=Harrisons+Spice+Reviews&sa=X&ved=2ahUKEwja7dHQupKRAxUdQPUHHWCMAC8Q0bkNegQIIRAE&biw=1366&bih=633&dpr=1"
+          href="https://www.google.com/search?sca_esv=56cc1d46b226e482&rlz=1C1CHBD_enLK1099LK1099&sxsrf=AE3TifMwurdXdko4HymvNJhkyaoc47mzZw:1764341011910&si=AMgyJEuzsz2NflaaWzrzdpjxXXRaJ2hfdMsbe_mSWso6src8s18sUqegxATttFUzWbfC-sPFa0JeF_BhrRM-tPzZTKK4HLcoV8Mz-RNYsSbRB_qF7JD1DmxcLUeEvS8gqV1EyhOn7tbN&q=UKTintz+Reviews&sa=X&ved=2ahUKEwjE95u6ipWRAxU8bvUHHZN8B7AQ0bkNegQIIxAE&biw=1536&bih=695&dpr=1.25"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-10 py-3 text-lg font-semibold rounded-full 
-          bg-[#C5A265] hover:bg-white text-black transition-all duration-300 shadow-lg"
+          bg-[#D20000] hover:bg-white text-black transition-all duration-300 shadow-lg"
         >
           Google Review
         </a>
