@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -46,13 +46,14 @@ export default function GallerySlider() {
             data-aos="fade-up"
         >
             <div className="max-w-6xl mx-auto">
-                {/* Section Title */}
-                <h2
-                    className="text-3xl md:text-4xl font-bold text-center mb-8 underline underline-offset-8px text-red-500"
-                    data-aos="fade-down"
-                >
-                    UK Tintz Gallery
-                </h2>
+                {/* Section Logo instead of Text */}
+                <div className="flex justify-center mb-8" data-aos="fade-down">
+                    <img
+                        src="/logo.png"
+                        alt="UK Tintz Logo"
+                        className="w-[150px] md:w-[200px] object-contain"
+                    />
+                </div>
 
                 {/* Swiper Gallery */}
                 <div data-aos="zoom-in" data-aos-delay="200">
@@ -86,22 +87,22 @@ export default function GallerySlider() {
 
             {/* Swiper Styles */}
             <style jsx global>{`
-        .swiper-pagination-bullet {
-            background: #CFCFCF;
-          opacity: 1;
-        }
-        .swiper-pagination-bullet-active {
-          background: ${BRAND_GOLD} !important;
-        }
-        .swiper-button-next,
-        .swiper-button-prev {
-          color: ${BRAND_GOLD} !important;
-        }
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
-          color: ${'#C99A2C'} !important;
-        }
-      `}</style>
+                .swiper-pagination-bullet {
+                    background: #CFCFCF;
+                    opacity: 1;
+                }
+                .swiper-pagination-bullet-active {
+                    background: ${BRAND_GOLD} !important;
+                }
+                .swiper-button-next,
+                .swiper-button-prev {
+                    color: ${BRAND_GOLD} !important;
+                }
+                .swiper-button-next:hover,
+                .swiper-button-prev:hover {
+                    color: #C99A2C !important;
+                }
+            `}</style>
         </section>
     );
 }

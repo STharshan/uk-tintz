@@ -86,7 +86,7 @@ export default function HeroSection() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-[#0f0f0f] py-16 px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      {/* <section className="bg-[#0f0f0f] py-16 px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         {[
           {
             review:
@@ -121,7 +121,7 @@ export default function HeroSection() {
             <p className="text-gray-300">{item.review}</p>
           </div>
         ))}
-      </section>
+      </section> */}
     </div>
   );
 }

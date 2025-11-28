@@ -7,7 +7,7 @@ import HeroSection from '../components/Hero'
 import ContactSection from '../components/Contact'
 import FindUs from '../components/Findus'
 import GallerySlider from '../components/GallerySlider'
-
+import Review from "../components/review"
 const Home = () => {
     return (
         <div>
@@ -17,6 +17,7 @@ const Home = () => {
             <FitnessInspirationSection />
             <GallerySlider />
             <StatsSection />
+            <Review />
             <ContactSection />
             <FindUs />
         </div>
