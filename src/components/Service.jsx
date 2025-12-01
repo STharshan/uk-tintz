@@ -7,37 +7,44 @@ import "aos/dist/aos.css";
 const services = [
   {
     name: "Window Tinting",
-    img: "/s4.jpg",
+    media: "/tint.mp4",
+    type: "video",
     link: "/windowtinting",
   },
   {
     name: "Stereo Fitting",
-    img: "s6.jpg",
+    media: "/stero.mp4",
+    type: "video",
     link: "/stereofitting",
   },
   {
     name: "Reverse Camera",
-    img: "s9.jpg",
+    media: "/s9.jpg",
+    type: "image",
     link: "/reversecamera",
   },
   {
     name: "Parking Sensors",
-    img: "s17.jpg",
+    media: "/s17.jpg",
+    type: "image",
     link: "/parkingsensors",
   },
   {
     name: "Dashcams",
-    img: "s3.jpg",
+    media: "/s3.jpg",
+    type: "image",
     link: "/dashcams",
   },
   {
     name: "Commercial Window",
-    img: "s28.jpg",
+    media: "/s28.jpg",
+    type: "image",
     link: "/commercialwindow",
   },
   {
     name: "Residential Tinting",
-    img: "s26.jpg",
+    media: "/s26.jpg",
+    type: "image",
     link: "/residentialtinting",
   },
 ];
@@ -45,9 +52,9 @@ const services = [
 const OurServices = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      once: true, // Animate only once
-      offset: 100, // Trigger point
+      duration: 1000,
+      once: true,
+      offset: 100,
     });
   }, []);
 
@@ -74,15 +81,25 @@ const OurServices = () => {
           <div
             key={index}
             data-aos="zoom-in"
-            data-aos-delay={index * 100} // Stagger animation
+            data-aos-delay={index * 100}
             className="relative w-1/4 min-w-[300px] h-[550px] transform transition-transform duration-500 hover:scale-[1.03]"
           >
-            {/* Image */}
-            <img
-              src={service.img}
-              alt={service.name}
-              className="w-full h-full object-cover"
-            />
+            {/* Media: Image or Video */}
+            {service.type === "image" ? (
+              <img
+                src={service.media}
+                alt={service.name}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <video
+                src={service.media}
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+              />
+            )}
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/50"></div>

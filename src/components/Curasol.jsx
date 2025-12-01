@@ -49,8 +49,8 @@ const HeroCurasol = () => {
       category: "Sleek Protection",
       snippet: "Enhanced comfort & style by applying premium-grade window films.",
       beforeImage: "/s5.jpg",
-      afterImage: "/s24.jpg",
-      popupImage: ["/s5.jpg", "/s24.jpg"],
+      afterImage: "/s4.jpg",
+      popupImage: ["/s5.jpg", "/s4.jpg"],
       link: "/projects/flooring-makeover-project",
     },
     {
@@ -307,7 +307,7 @@ const HeroCurasol = () => {
 
       {/* ⭐ POPUP MODAL */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-6">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-9999 p-6">
           <div className="relative w-full max-w-2xl bg-zinc-900 rounded-2xl overflow-visible shadow-xl border border-zinc-700">
             <button
               onClick={closePopup}
