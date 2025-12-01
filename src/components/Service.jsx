@@ -73,7 +73,7 @@ const OurServices = () => {
 
       {/* Service Cards */}
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4  w-full max-w-6xl mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-6 lg:grid-cols-3 xl:grid-cols-4  w-full max-w-6xl mx-auto"
         data-aos="fade-up"
         data-aos-delay="150"
       >
