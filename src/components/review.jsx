@@ -73,7 +73,7 @@ export default function Review() {
         <img
           src="logo.png"
           alt="Hear it from our clients"
-          className="w-[100%]  max-w-6xl object-contain "
+          className="w-full  max-w-6xl object-contain "
         />
       </div>
 

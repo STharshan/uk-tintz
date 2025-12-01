@@ -19,14 +19,14 @@ export default function HeroSection() {
       <section className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 lg:py-24 gap-10">
         {/* Left content */}
         <div
-          className="max-w-lg text-center lg:text-left space-y-6"
+          className="max-w-lg text-center lg:text-left space-y-4"
           data-aos="fade-right"
         >
-          <p className="text-sm uppercase tracking-widest text-gray-400">
+          <p className="text-sm uppercase tracking-widest text-gray-400 mt-10">
             UK Tintz – Window Tinting Specialists
           </p>
           <h1
-            className="text-4xl sm:text-5xl font-extrabold leading-tight"
+            className="text-4xl font-extrabold leading-tight"
             data-aos="fade-up"
             data-aos-delay="200"
           >

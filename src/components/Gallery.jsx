@@ -66,28 +66,28 @@ export default function FitnessInspirationSection() {
         data-aos-delay="300"
       >
         {/* LEFT IMAGE */}
-        <div className="relative top-[0vh] md:top-[10vh]" data-aos="fade-right">
+        <div className="relative top-0 md:top-[10vh]" data-aos="fade-right">
           <img
             src="/uk1.png"
             alt="Fitness Woman"
             className="w-[250px] h-[250px] md:w-[380px] md:h-[380px] object-cover rounded-2xl shadow-lg"
           />
-          <span className="absolute bottom-[20px] left-[20px] text-red-500 font-extrabold uppercase text-[24px] md:text-[36px] leading-none tracking-wide">
+          {/* <span className="absolute bottom-5 left-5 text-red-500 font-extrabold uppercase text-[24px] md:text-[36px] leading-none tracking-wide">
             Car Inspiration
-          </span>
+          </span> */}
         </div>
 
         {/* INSTAGRAM ICON (Centered always + 2px up) */}
         <a
           href="https://www.instagram.com/uktintz/"
           target="_blank"
-          className="translate-y-[-2px]"
+          className="translate-y-0.5"
           data-aos="zoom-in"
           data-aos-delay="400"
         >
           <div
             className="w-[75px] h-[75px] md:w-[85px] md:h-[85px] rounded-full flex items-center justify-center
-                       bg-gradient-to-br from-[#FEDA75] via-[#FA7E1E] via-[#D62976] to-[#962FBF]
+                       bg-linear-to-br from-[#FEDA75] via-[#f37a1d] via-[#d12774] to-[#962FBF]
                        shadow-xl cursor-pointer transition-transform duration-300
                        hover:scale-110"
           >
