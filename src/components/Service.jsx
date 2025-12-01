@@ -6,12 +6,6 @@ import "aos/dist/aos.css";
 
 const services = [
   {
-    name: "Window Tinting",
-    media: "/tint.mp4",
-    type: "video",
-    link: "/windowtinting",
-  },
-  {
     name: "Stereo Fitting",
     media: "/stero.mp4",
     type: "video",
@@ -28,6 +22,12 @@ const services = [
     media: "/s17.jpg",
     type: "image",
     link: "/parkingsensors",
+  },
+    {
+    name: "Window Tinting",
+    media: "/tint.mp4",
+    type: "video",
+    link: "/windowtinting",
   },
   {
     name: "Dashcams",
