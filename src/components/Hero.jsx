@@ -34,7 +34,7 @@ export default function HeroSection() {
             <span className="text-red-500">Tinting Expert</span>
           </h1>
           <p
-            className="text-gray-400 text-base"
+            className="text-gray-400 text-base mb-8"
             data-aos="fade-up"
             data-aos-delay="400"
           >
@@ -42,17 +42,18 @@ export default function HeroSection() {
             tinting — delivered with precision and care.
           </p>
 
-          <button
+          <a
+            href="#contact"
             className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold transition"
             data-aos="zoom-in"
             data-aos-delay="600"
           >
             Get in Touch
-          </button>
+          </a>
 
           {/* Key points */}
           <div
-            className="space-y-3 sm:justify-start sm:items-center gap-4 mt-6"
+            className="space-y-3 sm:justify-start sm:items-center gap-4 mt-10"
             data-aos="fade-up"
             data-aos-delay="800"
           >

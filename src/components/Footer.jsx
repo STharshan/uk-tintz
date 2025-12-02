@@ -37,7 +37,7 @@ export default function Footer() {
                 aria-label="Instagram"
               >
                 <FiInstagram
-                  className="text-gray-400 hover:text-blue-600 cursor-pointer transition-colors duration-300"
+                  className="text-gray-400 hover:text-pink-600 cursor-pointer transition-colors duration-300"
                   size={20}
                 />
               </a>

@@ -177,7 +177,7 @@ const HeroCurasol = () => {
 
   return (
     <div
-      id="about"
+      id="ourproject"
       className="bg-black text-white py-8 px-4 sm:px-6 lg:px-8 overflow-hidden scroll-m-10"
       data-aos="fade-up"
     >
