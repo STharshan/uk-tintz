@@ -76,7 +76,7 @@ const Navbar = () => {
                     onClick={() =>
                       setDesktopServicesOpen(!desktopServicesOpen)
                     }
-                    className="flex items-center gap-1 font-semibold text-red-500 hover:text-red-500 transition-colors"
+                    className="flex items-center gap-1 font-semibold text-red-500 hover:text-black cursor-pointer transition-colors"
                   >
                     {item.name} <FiChevronDown />
                   </button>

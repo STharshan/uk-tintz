@@ -39,7 +39,7 @@ export default function HeroSection() {
             data-aos-delay="400"
           >
             Professional window tinting, car vinyl wrapping, and commercial
-            tinting — delivered with precision and care.
+            tinting - delivered with precision and care.
           </p>
 
           <a
