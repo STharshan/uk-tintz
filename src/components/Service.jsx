@@ -12,28 +12,10 @@ const services = [
     link: "/stereofitting",
   },
   {
-    name: "Reverse Camera",
-    media: "/s9.jpg",
-    type: "image",
-    link: "/reversecamera",
-  },
-  {
-    name: "Parking Sensors",
-    media: "/s17.jpg",
-    type: "image",
-    link: "/parkingsensors",
-  },
-    {
     name: "Window Tinting",
     media: "/tint.mp4",
     type: "video",
     link: "/windowtinting",
-  },
-  {
-    name: "Dashcams",
-    media: "/s3.jpg",
-    type: "image",
-    link: "/dashcams",
   },
   {
     name: "Commercial Window",
@@ -46,6 +28,24 @@ const services = [
     media: "/s26.jpg",
     type: "image",
     link: "/residentialtinting",
+  },
+  {
+    name: "Parking Sensors",
+    media: "/s17.jpg",
+    type: "image",
+    link: "/parkingsensors",
+  },
+  {
+    name: "Reverse Camera",
+    media: "/s9.jpg",
+    type: "image",
+    link: "/reversecamera",
+  },
+  {
+    name: "Dashcams",
+    media: "/s3.jpg",
+    type: "image",
+    link: "/dashcams",
   },
 ];
 
