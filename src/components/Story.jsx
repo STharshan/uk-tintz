@@ -50,7 +50,7 @@ export default function StatsSection() {
           </h3>
           <p className="text-gray-300 mt-3 text-base md:text-lg max-w-[280px] mx-auto">
             A trusted name in tinting for decades — delivering excellence across
-            the Midlands and beyond.
+            the Nottingham and beyond.
           </p>
         </div>
 

@@ -59,7 +59,7 @@ export default function HeroSection() {
           >
             <div className="flex items-center gap-2">
               <CheckCircle className="text-red-500" size={18} />
-              <span>Over 2000 Vehicles Transformed</span>
+              <span>Over 10000+ Vehicles Transformed</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="text-red-500" size={18} />
@@ -67,7 +67,7 @@ export default function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="text-red-500" size={18} />
-              <span>Midlands’ Most Trusted Tinting Specialist</span>
+              <span>Nottingham Most Trusted Tinting Specialist</span>
             </div>
           </div>
         </div>

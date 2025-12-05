@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
             <p className="text-gray-400 mb-4 mt-3 leading-relaxed">
               A trusted name in tinting for decades — delivering excellence
-              across the Midlands and beyond.
+              across the Nottingham and beyond.
             </p>
             <div className="flex space-x-4">
               <a

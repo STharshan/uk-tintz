@@ -65,30 +65,6 @@ const HeroCurasol = () => {
     },
     {
       id: "3",
-      title: "Car Vinyl Wrap",
-      category: "Custom Expression",
-      snippet: "Transform your vehicle with high-quality, durable vinyl.",
-      beforeImage: "/s1.jpg",
-      afterImage: "/s13.jpg",
-      popupImage: ["/s1.jpg", "/s13.jpg"],
-      link: "/projects/renovation-revamp-venture",
-    },
-    {
-      id: "4",
-      title: "Interior Dash Vinyl Wrap",
-      category: "Refined Detail",
-      snippet: "Dashboard wrapped with textured and glossy finishes.",
-      beforeImage: "/s5.jpg",
-      afterImage: "/s6.jpg",
-      popupImage: [
-        "/s5.jpg",
-        "/s6.jpg",
-       
-      ],
-      link: "/projects/carpentry-solutions-project",
-    },
-    {
-      id: "5",
       title: "Residential Window Tint",
       category: "Comfort Living",
       snippet: "Improve home comfort, privacy, and energy efficiency.",
@@ -105,6 +81,30 @@ const HeroCurasol = () => {
         "/r6.jpeg",
       ],
       link: "/projects/electrical-upgrade-initiative",
+    },
+    {
+      id: "4",
+      title: "Car Vinyl Wrap",
+      category: "Custom Expression",
+      snippet: "Transform your vehicle with high-quality, durable vinyl.",
+      beforeImage: "/s1.jpg",
+      afterImage: "/s13.jpg",
+      popupImage: ["/s1.jpg", "/s13.jpg"],
+      link: "/projects/renovation-revamp-venture",
+    },
+    {
+      id: "5",
+      title: "Interior Dash Vinyl Wrap",
+      category: "Refined Detail",
+      snippet: "Dashboard wrapped with textured and glossy finishes.",
+      beforeImage: "/s5.jpg",
+      afterImage: "/s6.jpg",
+      popupImage: [
+        "/s5.jpg",
+        "/s6.jpg",
+       
+      ],
+      link: "/projects/carpentry-solutions-project",
     },
   ];
 
