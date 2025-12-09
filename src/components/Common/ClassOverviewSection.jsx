@@ -2,6 +2,17 @@
 import React from "react";
 
 export default function ClassOverviewTemplate({ data }) {
+  // Carbon Fiber Card Style
+  const carbonFiberStyle = {
+    backgroundImage: "repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 4px, #111 4px, #111 8px)",
+    border: "1px solid rgba(255,255,255,0.1)",
+    borderRadius: "1rem",
+    padding: "2rem",
+    boxShadow: "0 6px 18px rgba(0,0,0,0.45)",
+    transition: "transform 0.3s, box-shadow 0.3s",
+    cursor: "pointer",
+  };
+
   return (
     <section className={`${data.bgColor} py-20 px-6 md:px-12`}>
       <div className="max-w-6xl mx-auto">
@@ -29,13 +40,8 @@ export default function ClassOverviewTemplate({ data }) {
 
             {/* Benefits */}
             <div
-              className="
-                bg-white/5 backdrop-blur-md border border-white/20 rounded-xl p-8
-                transform transition duration-300 hover:scale-105
-                hover:shadow-[0_0_20px_rgba(255,0,0,0.7)]
-                active:scale-95 active:shadow-[0_0_15px_rgba(255,0,0,0.7)]
-                cursor-pointer
-              "
+              style={carbonFiberStyle}
+              className="transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.7)] active:scale-95 active:shadow-[0_0_15px_rgba(255,0,0,0.7)]"
             >
               <h3 className={`text-[20px] font-semibold ${data.textColor} mb-5`}>
                 Key Benefits
@@ -49,13 +55,8 @@ export default function ClassOverviewTemplate({ data }) {
 
             {/* Perfect For */}
             <div
-              className="
-                bg-white/5 backdrop-blur-md border border-white/20 rounded-xl p-8
-                transform transition duration-300 hover:scale-105
-                hover:shadow-[0_0_20px_rgba(255,0,0,0.7)]
-                active:scale-95 active:shadow-[0_0_15px_rgba(255,0,0,0.7)]
-                cursor-pointer
-              "
+              style={carbonFiberStyle}
+              className="transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.7)] active:scale-95 active:shadow-[0_0_15px_rgba(255,0,0,0.7)]"
             >
               <h3 className={`text-[20px] font-semibold ${data.textColor} mb-5`}>
                 Who This Service Is Perfect For

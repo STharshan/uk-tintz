@@ -14,11 +14,9 @@ export default function StatsSection() {
     });
   }, []);
 
-  // Glass fallback for older browsers or Tailwind purge issues
-  const glassStyle = {
-    backgroundColor: "rgba(255, 255, 255, 0.05)",
-    backdropFilter: "blur(10px)",
-    WebkitBackdropFilter: "blur(10px)",
+  // Carbon Fiber Style
+  const carbonFiberStyle = {
+    backgroundImage: "repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 4px, #111 4px, #111 8px)",
     border: "1px solid rgba(255,255,255,0.1)",
     boxShadow: "0 6px 18px rgba(0,0,0,0.45)",
     borderRadius: "1rem",
@@ -56,7 +54,7 @@ export default function StatsSection() {
           data-aos="fade-up"
           data-aos-delay="100"
           className="transition-transform transform hover:scale-105 cursor-pointer"
-          style={glassStyle}
+          style={carbonFiberStyle}
         >
           <h3 className="text-4xl md:text-5xl font-extrabold">
             20+<span className="text-red-500">Years</span>
@@ -72,7 +70,7 @@ export default function StatsSection() {
           data-aos="fade-up"
           data-aos-delay="300"
           className="transition-transform transform hover:scale-105 cursor-pointer"
-          style={glassStyle}
+          style={carbonFiberStyle}
         >
           <h3 className="flex items-center justify-center gap-2 text-4xl md:text-5xl font-extrabold">
             5<Star className="w-6 h-6" />
@@ -89,7 +87,7 @@ export default function StatsSection() {
           data-aos="fade-up"
           data-aos-delay="500"
           className="transition-transform transform hover:scale-105 cursor-pointer"
-          style={glassStyle}
+          style={carbonFiberStyle}
         >
           <h3 className="text-4xl md:text-5xl font-extrabold">
             10,000+<span className="text-red-500">Jobs</span>

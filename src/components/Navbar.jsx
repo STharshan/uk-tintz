@@ -12,7 +12,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/#" },
     { name: "Our Project", href: "/#about" },
-    { name: "Services", href: "/services" }, // Dropdown handled separately
+    { name: "Services", href: "/services" },
     { name: "Gallery", href: "/#gallery" },
     { name: "Contact", href: "/#contact" },
   ];
@@ -28,38 +28,30 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    {
-      icon: <FiInstagram />,
-      href: "https://www.instagram.com/uktintz/",
-    },
+    { icon: <FiInstagram />, href: "https://www.instagram.com/uktintz/" },
   ];
 
   // Close desktop dropdown if click outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        servicesRef.current &&
-        !servicesRef.current.contains(event.target)
-      ) {
+      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
         setDesktopServicesOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Carbon Fiber Tailwind JIT-compatible class
+  const carbonFiberStyle =
+    "bg-[repeating-linear-gradient(45deg,#1a1a1a,#1a1a1a_4px,#111_4px,#111_8px)] border border-white/10 rounded-lg shadow-md";
+
   return (
-    <nav className="bg-[#1b1b1b] text-white px-6 md:px-12 lg:px-20 shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between h-18">
+    <nav className={`fixed w-full z-50 ${carbonFiberStyle}`}>
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-18 px-6 md:px-12 lg:px-20 py-3">
         {/* Logo */}
         <div className="flex items-center gap-3 bg-white p-2 rounded-md">
-          <img
-            src="/logo.png"
-            alt="UK Logo"
-            className="w-25 h-12 object-contain"
-          />
+          <img src="/logo.png" alt="UK Logo" className="w-25 h-12 object-contain" />
         </div>
 
         {/* Desktop Menu */}
@@ -67,28 +59,23 @@ const Navbar = () => {
           {navLinks.map((item) => {
             if (item.name === "Services") {
               return (
-                <div
-                  key={item.name}
-                  ref={servicesRef}
-                  className="relative"
-                >
+                <div key={item.name} ref={servicesRef} className="relative">
                   <button
-                    onClick={() =>
-                      setDesktopServicesOpen(!desktopServicesOpen)
-                    }
+                    onClick={() => setDesktopServicesOpen(!desktopServicesOpen)}
                     className="flex items-center gap-1 font-semibold text-white hover:text-red-500 transition-colors"
                   >
                     {item.name} <FiChevronDown />
                   </button>
 
-                  {/* Dropdown */}
                   {desktopServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-[#222] rounded-md shadow-lg z-50">
+                    <div
+                      className={`absolute left-0 mt-2 w-48 z-50 p-2 ${carbonFiberStyle}`}
+                    >
                       {servicesLinks.map((service) => (
                         <Link
                           key={service.name}
                           to={service.href}
-                          className="block px-4 py-2 text-gray-200 hover:text-red-500 transition-colors"
+                          className="block px-4 py-2 text-gray-200 hover:text-red-500 rounded-md"
                         >
                           {service.name}
                         </Link>
@@ -153,15 +140,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden mt-4 bg-[#222] rounded-lg p-4 space-y-3">
+        <div className={`lg:hidden mt-2 p-4 space-y-3 ${carbonFiberStyle}`}>
           {navLinks.map((item) => {
             if (item.name === "Services") {
               return (
                 <div key={item.name} className="space-y-2">
                   <button
-                    onClick={() =>
-                      setMobileServicesOpen(!mobileServicesOpen)
-                    }
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                     className="w-full flex justify-between items-center py-2 text-gray-200 hover:text-red-500 font-semibold border-b border-red-500/20 last:border-0 transition-colors"
                   >
                     {item.name} <FiChevronDown />

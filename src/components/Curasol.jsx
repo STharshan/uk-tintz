@@ -227,12 +227,17 @@ const HeroCurasol = () => {
                 data-aos-delay={index * 150}
               >
                <div
-  className={`bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden transition-all duration-500 border ${
+  className={`rounded-3xl overflow-hidden transition-all duration-500 border ${
     index === activeIndex
       ? "border-white/30 shadow-2xl shadow-red-600/20"
       : "border-white/20 shadow-lg"
   }`}
-  style={{ minHeight: "480px" }}
+  style={{
+    minHeight: "480px",
+    backgroundImage:
+      "repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 4px, #111 4px, #111 8px)",
+    boxShadow: index === activeIndex ? "0 20px 50px rgba(255,0,0,0.2)" : "0 6px 18px rgba(0,0,0,0.45)",
+  }}
 >
   {/* Images */}
   <div className="grid grid-cols-2 gap-3 p-5">
