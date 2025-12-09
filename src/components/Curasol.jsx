@@ -226,62 +226,63 @@ const HeroCurasol = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >
-                <div
-                  className={`bg-zinc-900 rounded-3xl overflow-hidden transition-all duration-500 border ${
-                    index === activeIndex
-                      ? "border-zinc-700 shadow-2xl shadow-red-600/20"
-                      : "border-zinc-800 shadow-lg"
-                  }`}
-                  style={{ minHeight: "480px" }}
-                >
-                  {/* Images */}
-                  <div className="grid grid-cols-2 gap-3 p-5">
-                    <div className="rounded-2xl overflow-hidden bg-zinc-800 aspect-4/3">
-                      <img
-                        src={project.beforeImage}
-                        alt=""
-                        className="w-full h-full object-cover opacity-70"
-                      />
-                    </div>
-                    <div className="rounded-2xl overflow-hidden bg-zinc-800 aspect-4/3">
-                      <img
-                        src={project.afterImage}
-                        alt=""
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
+               <div
+  className={`bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden transition-all duration-500 border ${
+    index === activeIndex
+      ? "border-white/30 shadow-2xl shadow-red-600/20"
+      : "border-white/20 shadow-lg"
+  }`}
+  style={{ minHeight: "480px" }}
+>
+  {/* Images */}
+  <div className="grid grid-cols-2 gap-3 p-5">
+    <div className="rounded-2xl overflow-hidden bg-white/10 aspect-4/3">
+      <img
+        src={project.beforeImage}
+        alt=""
+        className="w-full h-full object-cover opacity-70"
+      />
+    </div>
+    <div className="rounded-2xl overflow-hidden bg-white/10 aspect-4/3">
+      <img
+        src={project.afterImage}
+        alt=""
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
 
-                  {/* Content */}
-                  <div className="px-6 pb-6">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 uppercase tracking-tight leading-snug">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm sm:text-base md:text-base leading-relaxed mb-4 sm:mb-6">
-                      {project.snippet}
-                    </p>
+  {/* Content */}
+  <div className="px-6 pb-6">
+    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 uppercase tracking-tight leading-snug">
+      {project.title}
+    </h3>
+    <p className="text-gray-200 text-sm sm:text-base md:text-base leading-relaxed mb-4 sm:mb-6">
+      {project.snippet}
+    </p>
 
-                    {/* Footer */}
-                    <div className="flex items-center justify-between pt-4 border-t border-zinc-800">
-                      <div className="flex items-center gap-2">
-                        <div className="w-1 h-8 bg-red-600 rounded-full"></div>
-                        <span className="text-white font-medium text-sm">
-                          {project.category}
-                        </span>
-                      </div>
+    {/* Footer */}
+    <div className="flex items-center justify-between pt-4 border-t border-white/10">
+      <div className="flex items-center gap-2">
+        <div className="w-1 h-8 bg-red-600 rounded-full"></div>
+        <span className="text-white font-medium text-sm">
+          {project.category}
+        </span>
+      </div>
 
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          openPopup(project);
-                        }}
-                        className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition-all duration-300"
-                      >
-                        <ArrowRight className="group-hover:-rotate-45 transition-transform duration-300" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          openPopup(project);
+        }}
+        className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition-all duration-300"
+      >
+        <ArrowRight className="group-hover:-rotate-45 transition-transform duration-300" />
+      </button>
+    </div>
+  </div>
+</div>
+
               </div>
             ))}
 

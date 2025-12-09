@@ -29,7 +29,13 @@ export default function ClassOverviewTemplate({ data }) {
 
             {/* Benefits */}
             <div
-              className="bg-[#111111] border border-red-500/20 rounded-xl p-8 transform transition duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.7)] active:scale-95 active:shadow-[0_0_15px_rgba(255,0,0,0.7)] cursor-pointer"
+              className="
+                bg-white/5 backdrop-blur-md border border-white/20 rounded-xl p-8
+                transform transition duration-300 hover:scale-105
+                hover:shadow-[0_0_20px_rgba(255,0,0,0.7)]
+                active:scale-95 active:shadow-[0_0_15px_rgba(255,0,0,0.7)]
+                cursor-pointer
+              "
             >
               <h3 className={`text-[20px] font-semibold ${data.textColor} mb-5`}>
                 Key Benefits
@@ -43,7 +49,13 @@ export default function ClassOverviewTemplate({ data }) {
 
             {/* Perfect For */}
             <div
-              className="bg-[#111111] border border-red-500/20 rounded-xl p-8 transform transition duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.7)] active:scale-95 active:shadow-[0_0_15px_rgba(255,0,0,0.7)] cursor-pointer"
+              className="
+                bg-white/5 backdrop-blur-md border border-white/20 rounded-xl p-8
+                transform transition duration-300 hover:scale-105
+                hover:shadow-[0_0_20px_rgba(255,0,0,0.7)]
+                active:scale-95 active:shadow-[0_0_15px_rgba(255,0,0,0.7)]
+                cursor-pointer
+              "
             >
               <h3 className={`text-[20px] font-semibold ${data.textColor} mb-5`}>
                 Who This Service Is Perfect For
