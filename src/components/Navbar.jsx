@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "/#" },
-    { name: "Our Project", href: "/#ourproject" },
+    { name: "Our Project", href: "/#about" },
     { name: "Services", href: "/services" }, // Dropdown handled separately
     { name: "Gallery", href: "/#gallery" },
     { name: "Contact", href: "/#contact" },
@@ -51,14 +51,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white text-red-500 px-6 md:px-12 lg:px-20 shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
+    <nav className="bg-[#1b1b1b] text-white px-6 md:px-12 lg:px-20 shadow-md fixed w-full z-50">
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-18">
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 bg-white p-2 rounded-md">
           <img
             src="/logo.png"
             alt="UK Logo"
-            className="w-36 h-12 object-contain"
+            className="w-25 h-12 object-contain"
           />
         </div>
 
@@ -76,7 +76,7 @@ const Navbar = () => {
                     onClick={() =>
                       setDesktopServicesOpen(!desktopServicesOpen)
                     }
-                    className="flex items-center gap-1 font-semibold text-red-500 hover:text-black cursor-pointer transition-colors"
+                    className="flex items-center gap-1 font-semibold text-white hover:text-red-500 transition-colors"
                   >
                     {item.name} <FiChevronDown />
                   </button>
@@ -88,7 +88,7 @@ const Navbar = () => {
                         <Link
                           key={service.name}
                           to={service.href}
-                          className="block px-4 py-2 text-gray-200 hover:text-black transition-colors"
+                          className="block px-4 py-2 text-gray-200 hover:text-red-500 transition-colors"
                         >
                           {service.name}
                         </Link>
@@ -103,7 +103,7 @@ const Navbar = () => {
                   key={item.name}
                   smooth
                   to={item.href}
-                  className="flex items-center gap-1 font-semibold text-red-500 hover:text-black transition-colors"
+                  className="flex items-center gap-1 font-semibold text-white hover:text-red-500 transition-colors"
                 >
                   {item.name}
                 </HashLink>
@@ -120,7 +120,7 @@ const Navbar = () => {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#2c2c2c] p-2 rounded-full hover:text-pink-600 transition-colors"
+              className="bg-[#2c2c2c] p-2 rounded-full hover:bg-red-500 transition-colors"
             >
               {item.icon}
             </a>
@@ -135,7 +135,7 @@ const Navbar = () => {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#2c2c2c] p-2 rounded-full hover:text-pink-500 transition-colors"
+              className="bg-[#2c2c2c] p-2 rounded-full hover:bg-red-500 transition-colors"
             >
               {item.icon}
             </a>
@@ -144,7 +144,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="bg-[#2c2c2c] p-2 rounded-full text-xl"
+            className="bg-red-500 p-2 rounded-full text-xl"
           >
             {menuOpen ? <FiX /> : <FiMenu />}
           </button>
