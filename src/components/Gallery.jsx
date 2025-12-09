@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
 
 export default function FitnessInspirationSection() {
   useEffect(() => {
@@ -59,7 +59,7 @@ export default function FitnessInspirationSection() {
         </h2>
       </div>
 
-      {/* IMAGE + ICON CONTAINER */}
+      {/* IMAGE + ICONS CONTAINER */}
       <div
         className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0 w-[90%] max-w-[1400px] z-10"
         data-aos="zoom-in"
@@ -72,28 +72,61 @@ export default function FitnessInspirationSection() {
             alt="Fitness Woman"
             className="w-[250px] h-[250px] md:w-[380px] md:h-[380px] object-cover rounded-2xl shadow-lg"
           />
-          {/* <span className="absolute bottom-5 left-5 text-red-500 font-extrabold uppercase text-[24px] md:text-[36px] leading-none tracking-wide">
-            Car Inspiration
-          </span> */}
         </div>
 
-        {/* INSTAGRAM ICON (Centered always + 2px up) */}
-        <a
-          href="https://www.instagram.com/uktintz/"
-          target="_blank"
-          className="translate-y-0.5"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
-          <div
-            className="w-[75px] h-[75px] md:w-[85px] md:h-[85px] rounded-full flex items-center justify-center
+        {/* SOCIAL ICONS (Instagram, TikTok, Facebook) */}
+        <div className="flex flex-row items-center gap-6">
+
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/uktintz/"
+            target="_blank"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div
+              className="w-[75px] h-[75px] md:w-[85px] md:h-[85px] rounded-full flex items-center justify-center
                        bg-linear-to-br from-[#FEDA75] via-[#f37a1d] via-[#d12774] to-[#962FBF]
                        shadow-xl cursor-pointer transition-transform duration-300
                        hover:scale-110"
+            >
+              <FaInstagram className="text-white text-[35px] md:text-[42px]" />
+            </div>
+          </a>
+
+          {/* TikTok */}
+          <a
+            href="https://www.tiktok.com/@uktintz"
+            target="_blank"
+            data-aos="zoom-in"
+            data-aos-delay="500"
           >
-            <FaInstagram className="text-white text-[35px] md:text-[42px]" />
-          </div>
-        </a>
+            <div
+              className="w-[75px] h-[75px] md:w-[85px] md:h-[85px] rounded-full flex items-center justify-center
+                       bg-white shadow-xl cursor-pointer transition-transform duration-300
+                       hover:scale-110"
+            >
+              <FaTiktok className="text-black text-[35px] md:text-[42px]" />
+            </div>
+          </a>
+
+          {/* Facebook */}
+          <a
+            href="https://www.facebook.com/uktintz.nottingham/?locale=en_GB"
+            target="_blank"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          >
+            <div
+              className="w-[75px] h-[75px] md:w-[85px] md:h-[85px] rounded-full flex items-center justify-center
+                       bg-[#1877F2] shadow-xl cursor-pointer transition-transform duration-300
+                       hover:scale-110"
+            >
+              <FaFacebookF className="text-white text-[32px] md:text-[40px]" />
+            </div>
+          </a>
+
+        </div>
 
         {/* RIGHT IMAGE */}
         <div className="relative" data-aos="fade-left" data-aos-delay="200">

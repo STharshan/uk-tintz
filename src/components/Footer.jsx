@@ -1,6 +1,7 @@
 import React from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
+import { FaFacebookF, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -18,6 +19,7 @@ export default function Footer() {
     <footer className="bg-black border-t border-gray-800 py-12">
       <div className="container mx-auto px-4 md:px-12">
         <div className="grid md:grid-cols-3 gap-8">
+          
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3">
@@ -25,11 +27,16 @@ export default function Footer() {
                 UK<span className="text-gray-400">Tintz</span>
               </span>
             </div>
+
             <p className="text-gray-400 mb-4 mt-3 leading-relaxed">
               A trusted name in tinting for decades — delivering excellence
-              across the Nottingham and beyond.
+              across Nottingham and beyond.
             </p>
-            <div className="flex space-x-4">
+
+            {/* Social Icons */}
+            <div className="flex space-x-4 mt-3">
+
+              {/* Instagram */}
               <a
                 href="https://www.instagram.com/uktintz/"
                 target="_blank"
@@ -41,6 +48,33 @@ export default function Footer() {
                   size={20}
                 />
               </a>
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/uktintz.nottingham/?locale=en_GB"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <FaFacebookF
+                  className="text-gray-400 hover:text-blue-500 cursor-pointer transition-colors duration-300"
+                  size={20}
+                />
+              </a>
+
+              {/* TikTok */}
+              <a
+                href="https://www.tiktok.com/@uktintz"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+              >
+                <FaTiktok
+                  className="text-gray-400 hover:text-white cursor-pointer transition-colors duration-300"
+                  size={20}
+                />
+              </a>
+
             </div>
           </div>
 
@@ -77,7 +111,8 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  Unit 6. Broxtowe Park Business Centre Calverton Drive Nottingham NG8 6QP
+                  Unit 6. Broxtowe Park Business Centre  
+                  Calverton Drive Nottingham NG8 6QP
                 </a>
               </li>
 

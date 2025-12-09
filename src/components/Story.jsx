@@ -45,7 +45,7 @@ export default function StatsSection() {
         {/* 1️⃣ Active Users */}
         <div data-aos="fade-up" data-aos-delay="100">
           <h3 className="text-4xl md:text-5xl font-extrabold">
-            30+
+            20+
             <span className="text-red-500">Years</span>
           </h3>
           <p className="text-gray-300 mt-3 text-base md:text-lg max-w-[280px] mx-auto">
