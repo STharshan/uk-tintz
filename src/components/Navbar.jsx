@@ -50,9 +50,9 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 ${carbonFiberStyle}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between h-18 px-6 md:px-12 lg:px-20 py-3">
         {/* Logo */}
-        <div className="flex items-center gap-3 bg-white p-2 rounded-md">
-          <img src="/logo.png" alt="UK Logo" className="w-25 h-12 object-contain" />
-        </div>
+       
+          <img src="/UK_TINTz_Logo_Design-removebg-preview.png" alt="UK Logo" className="w-25 h-20 object-contain" />
+        
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-8">
