@@ -25,6 +25,10 @@ const Navbar = () => {
     { name: "Dashcams", href: "/dashcams" },
     { name: "Commercial Window", href: "/commercialwindow" },
     { name: "Residential Tinting", href: "/residentialtinting" },
+    { name: "Car Vinyl Wrapping", href: "/CarVinylWrapping" },
+  { name: "Interior Vinyl Wrapping", href: "/interiorVinylWrapping" },
+  { name: "Headlight & Taillight Tinting", href: "/headlightTaillightTinting" },
+  { name: "Sun Visors", href: "/sunVisors" },
   ];
 
   const socialLinks = [

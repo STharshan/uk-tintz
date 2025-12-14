@@ -47,6 +47,31 @@ const services = [
     type: "image",
     link: "/dashcams",
   },
+  {
+  name: "Interior Vinyl Wrapping",
+  media: "/s8.jpg",
+  type: "image",
+  link: "/interiorVinylWrapping",
+},
+{
+  name: "Headlight & Taillight Tinting",
+  media: "/s18.jpg",
+  type: "image",
+  link: "/headlightTaillightTinting",
+},
+{
+  name: "Sun Visors",
+  media: "/s16.jpg",
+  type: "image",
+  link: "/sunVisors",
+},
+{
+  name: "Car Vinyl Wrapping",
+  media: "/s17.jpg",
+  type: "image",
+  link: "/CarVinylWrapping",
+},
+
 ];
 
 const OurServices = () => {

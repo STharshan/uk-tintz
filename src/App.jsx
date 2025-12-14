@@ -14,7 +14,10 @@ import TermsConditions from "./components/Term";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import GDPRConsent from "./components/GDPRButton";
 
-
+import InteriorVinylWrapping from "./pages/InteriorVinylWrapping"
+import HeadlightTaillightTinting from "./pages/HeadlightTaillightTinting"
+import SunVisors from "./pages/SunVisors"
+import CarVinylWrapping from "./pages/CarVinylWrapping"
 function App() {
   return (
     <Router>
@@ -29,6 +32,10 @@ function App() {
         <Route path="/dashcams" element={<Dashcams />} />
         <Route path="/commercialwindow" element={<Commercialwindow />} />
         <Route path="/residentialtinting" element={<ResidentialTinting />} />
+        <Route path="/interiorVinylWrapping" element={<InteriorVinylWrapping />} />
+        <Route path="/headlightTaillightTinting" element={<HeadlightTaillightTinting />} />
+        <Route path="/sunVisors" element={<SunVisors />} />
+        <Route path="/CarVinylWrapping" element={<CarVinylWrapping />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
