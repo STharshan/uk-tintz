@@ -31,8 +31,8 @@ const services = [
   },
   {
     name: "Parking Sensors",
-    media: "/s17.jpg",
-    type: "image",
+    media: "/Parking.mp4",
+    type: "video",
     link: "/parkingsensors",
   },
   {

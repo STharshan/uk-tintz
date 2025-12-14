@@ -3,7 +3,7 @@ export const HeadlightTaillightTintingData = {
   title: "Headlight & Taillight Tinting",
   subtitle:
     "Enhance your vehicle’s appearance with professional light tinting that delivers a sleek look while maintaining clarity, safety, and a factory-quality finish.",
-  image: "headlight-taillight-banner.jpg",
+  image: "s7.jpg",
   imageAlt: "Headlight and Taillight Tinting",
   textColor: "text-red-500",
   bgColor: "bg-black",
@@ -36,6 +36,6 @@ export const HeadlightTaillightTintingData = {
   ],
 
   // Overview Image
-  overviewImage: "headlight-taillight-overview.jpg",
+  overviewImage: "s17.jpg",
   overviewImageAlt: "Headlight and Taillight Tinting Overview",
 };

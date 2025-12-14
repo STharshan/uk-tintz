@@ -3,7 +3,7 @@ export const SunVisorServiceData = {
   title: "Sun Visor Service",
   subtitle:
     "Enhance comfort and style inside your vehicle with professionally fitted sun visors designed to reduce glare and deliver a clean, factory-quality finish.",
-  image: "sun-visor-banner.jpg",
+  image: "s5.jpg",
   imageAlt: "Sun Visor Service",
   textColor: "text-red-500",
   bgColor: "bg-black",
@@ -36,6 +36,6 @@ export const SunVisorServiceData = {
   ],
 
   // Overview Image
-  overviewImage: "sun-visor-overview.jpg",
+  overviewImage: "s15.jpg",
   overviewImageAlt: "Sun Visor Service Overview",
 };
