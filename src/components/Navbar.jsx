@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FiInstagram, FiMenu, FiX, FiChevronDown } from "react-icons/fi";
+import { FaFacebookF, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -26,13 +27,24 @@ const Navbar = () => {
     { name: "Commercial Window", href: "/commercialwindow" },
     { name: "Residential Tinting", href: "/residentialtinting" },
     { name: "Car Vinyl Wrapping", href: "/CarVinylWrapping" },
-  { name: "Interior Vinyl Wrapping", href: "/interiorVinylWrapping" },
-  { name: "Headlight & Taillight Tinting", href: "/headlightTaillightTinting" },
-  { name: "Sun Visors", href: "/sunVisors" },
+    { name: "Interior Vinyl Wrapping", href: "/interiorVinylWrapping" },
+    { name: "Headlight & Taillight Tinting", href: "/headlightTaillightTinting" },
+    { name: "Sun Visors", href: "/sunVisors" },
   ];
 
   const socialLinks = [
-    { icon: <FiInstagram />, href: "https://www.instagram.com/uktintz/" },
+    {
+      icon: <FiInstagram className="text-gray-400 hover:text-pink-500 transition duration-300" />,
+      href: "https://www.instagram.com/uktintz/",
+    },
+    {
+      icon: <FaFacebookF className="text-gray-400 hover:text-blue-500 transition duration-300" />,
+      href: "https://www.facebook.com/uktintz.nottingham/?locale=en_GB",
+    },
+    {
+      icon: <FaTiktok className="text-gray-400 hover:text-white transition duration-300" />,
+      href: "https://www.tiktok.com/@uktintz",
+    },
   ];
 
   // Close desktop dropdown if click outside
@@ -46,7 +58,6 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Carbon Fiber Tailwind JIT-compatible class
   const carbonFiberStyle =
     "bg-[repeating-linear-gradient(45deg,#1a1a1a,#1a1a1a_4px,#111_4px,#111_8px)] border border-white/10 rounded-lg shadow-md";
 
@@ -54,9 +65,11 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 ${carbonFiberStyle}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between h-18 px-6 md:px-12 lg:px-20 py-3">
         {/* Logo */}
-       
-          <img src="/UK_TINTz_Logo_Design-removebg-preview.png" alt="UK Logo" className="w-25 h-20 object-contain" />
-        
+        <img
+          src="/UK_TINTz_Logo_Design-removebg-preview.png"
+          alt="UK Logo"
+          className="w-25 h-20 object-contain"
+        />
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-8">
@@ -111,7 +124,7 @@ const Navbar = () => {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#2c2c2c] p-2 rounded-full hover:bg-red-500 transition-colors"
+              className="bg-[#2c2c2c] p-2 rounded-full"
             >
               {item.icon}
             </a>
@@ -126,7 +139,7 @@ const Navbar = () => {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#2c2c2c] p-2 rounded-full hover:bg-red-500 transition-colors"
+              className="bg-[#2c2c2c] p-2 rounded-full"
             >
               {item.icon}
             </a>
