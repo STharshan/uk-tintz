@@ -43,8 +43,8 @@ const services = [
   },
   {
     name: "Dashcams",
-    media: "/s3.jpg",
-    type: "image",
+    media: "/service.mp4",
+    type: "video",
     link: "/dashcams",
   },
   {
