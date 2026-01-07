@@ -71,12 +71,22 @@ export default function ClassOverviewTemplate({ data }) {
           </div>
 
           {/* Image */}
-          <div className="rounded-xl overflow-hidden shadow-md h-full">
-            <img
-              src={data.overviewImage}
-              alt={data.overviewImageAlt}
-              className="w-full h-full object-cover"
-            />
+         <div className="rounded-xl overflow-hidden shadow-md h-full">
+            {data.overviewImage && data.overviewImage !== "null" ? (
+              <img
+                src={data.overviewImage}
+                alt={data.overviewImageAlt}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <video
+                src={data.overviewVideo}
+                controls
+                className="w-full h-180 object-cover"
+              >
+                Your browser does not support the video tag.
+              </video>
+            )}
           </div>
 
         </div>

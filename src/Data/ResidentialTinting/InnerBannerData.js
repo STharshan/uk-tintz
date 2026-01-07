@@ -36,6 +36,8 @@ export const ResidentialTintingData = {
   ],
 
   // ⭐ Overview Image
-  overviewImage: "s23.jpg",
+  overviewImage: "null",
   overviewImageAlt: "Residential Window Tinting Overview",
+
+  overviewVideo:"residential window tinting services page.mp4"
 };

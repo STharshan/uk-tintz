@@ -72,7 +72,7 @@ export default function HeroSection() {
 
             <div className="flex items-center gap-2 justify-center">
               <CheckCircle className="text-red-500" size={18} />
-              <span>Nottingham Most Trusted Tinting Specialist</span>
+              <span>Nottinghams Most Trusted Tinting Specialist</span>
             </div>
           </div>
         </div>

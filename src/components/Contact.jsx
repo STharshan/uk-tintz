@@ -93,19 +93,20 @@ export default function ContactSection() {
             />
           </div>
 
-          {/* Email */}
+          {/* Phone */}
           <div data-aos="fade-right" data-aos-delay="700">
-            <label className="block text-sm text-gray-300 mb-1">Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="jane@framer.com"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-md bg-zinc-900 text-white border border-zinc-700 focus:border-red-500 outline-none"
-            />
-          </div>
+  <label className="block text-sm text-gray-300 mb-1">Phone Number</label>
+  <input
+    type="tel"
+    name="phone"
+    placeholder="+94 712 345 678"
+    value={formData.phone} // make sure you have phone in your formData state
+    onChange={handleChange}
+    required
+    className="w-full px-4 py-3 rounded-md bg-zinc-900 text-white border border-zinc-700 focus:border-red-500 outline-none"
+  />
+</div>
+
 
           {/* Message */}
           <div data-aos="fade-right" data-aos-delay="800">

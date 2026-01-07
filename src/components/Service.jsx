@@ -5,47 +5,23 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const services = [
-  {
-    name: "Stereo Fitting",
-    media: "/stero.mp4",
-    type: "video",
-    link: "/stereofitting",
-  },
-  {
+   {
     name: "Window Tinting",
     media: "/tint.mp4",
     type: "video",
     link: "/windowtinting",
   },
-  {
-    name: "Commercial Window",
-    media: "/s28.jpg",
-    type: "image",
-    link: "/commercialwindow",
-  },
-  {
+   {
     name: "Residential Tinting",
     media: "/s26.jpg",
     type: "image",
     link: "/residentialtinting",
   },
-  {
-    name: "Parking Sensors",
-    media: "/Parking.mp4",
-    type: "video",
-    link: "/parkingsensors",
-  },
-  {
-    name: "Reverse Camera",
-    media: "/s9.jpg",
+   {
+    name: "Commercial Window",
+    media: "/s28.jpg",
     type: "image",
-    link: "/reversecamera",
-  },
-  {
-    name: "Dashcams",
-    media: "/service.mp4",
-    type: "video",
-    link: "/dashcams",
+    link: "/commercialwindow",
   },
   {
   name: "Interior Vinyl Wrapping",
@@ -54,23 +30,56 @@ const services = [
   link: "/interiorVinylWrapping",
 },
 {
-  name: "Headlight & Taillight Tinting",
-  media: "/s18.jpg",
-  type: "image",
-  link: "/headlightTaillightTinting",
-},
-{
-  name: "Sun Visors",
-  media: "/s16.jpg",
-  type: "image",
-  link: "/sunVisors",
-},
-{
   name: "Car Vinyl Wrapping",
   media: "/s17.jpg",
   type: "image",
   link: "/CarVinylWrapping",
 },
+{
+  name: "Sun Visors",
+  media: "/sun visor video.mp4",
+  type: "video",
+  link: "/sunVisors",
+},
+{
+  name: "Headlight & Taillight Tinting",
+  media: "/s18.jpg",
+  type: "image",
+  link: "/headlightTaillightTinting",
+},
+  {
+    name: "Dashcams",
+    media: "/stero.mp4",
+    type: "video",
+    link: "/dashcams",
+  },
+   {
+    name: "Reverse Camera",
+    media: "/s9.jpg",
+    type: "image",
+    link: "/reversecamera",
+  },
+ {
+    name: "Parking Sensors",
+    media: "/parking sensor video.mp4",
+    type: "video",
+    link: "/parkingsensors",
+  },
+ 
+  {
+    name: "Stereo Fitting",
+    media: "/stero.mp4",
+    type: "video",
+    link: "/stereofitting",
+  },
+ 
+ 
+ 
+ 
+
+  
+
+
 
 ];
 

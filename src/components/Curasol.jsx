@@ -68,8 +68,8 @@ const HeroCurasol = () => {
       title: "Residential Window Tint",
       category: "Comfort Living",
       snippet: "Improve home comfort, privacy, and energy efficiency.",
-      beforeImage: "/s26.jpg",
-      afterImage: "/s23.jpg",
+      beforeImage: "/After residential tints.jpeg",
+      afterImage: "/before residential tints.jpeg",
        popupImage: [
         "/s26.jpg",
         "/s23.jpg",
