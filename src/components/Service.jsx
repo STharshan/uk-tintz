@@ -49,14 +49,14 @@ const services = [
 },
   {
     name: "Dashcams",
-    media: "/newstereo.mp4",
+    media: "/service.mp4",
     type: "video",
     link: "/dashcams",
   },
    {
     name: "Reverse Camera",
-    media: "/s9.jpg",
-    type: "image",
+    media: "/reversecam.mp4",
+    type: "video",
     link: "/reversecamera",
   },
  {
