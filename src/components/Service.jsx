@@ -13,8 +13,8 @@ const services = [
   },
    {
     name: "Residential Tinting",
-    media: "/s26.jpg",
-    type: "image",
+    media: "/residential window tinting services page.mp4",
+    type: "video",
     link: "/residentialtinting",
   },
    {
