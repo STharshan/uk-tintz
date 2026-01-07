@@ -49,7 +49,7 @@ const services = [
 },
   {
     name: "Dashcams",
-    media: "/stero.mp4",
+    media: "/newstereo.mp4",
     type: "video",
     link: "/dashcams",
   },
@@ -61,14 +61,14 @@ const services = [
   },
  {
     name: "Parking Sensors",
-    media: "/parking sensor video.mp4",
+    media: "/Parking.mp4",
     type: "video",
     link: "/parkingsensors",
   },
  
   {
     name: "Stereo Fitting",
-    media: "/stero.mp4",
+    media: "/newstereo.mp4",
     type: "video",
     link: "/stereofitting",
   },
