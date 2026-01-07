@@ -49,7 +49,7 @@ const services = [
 },
   {
     name: "Dashcams",
-    media: "/service.mp4",
+    media: "/dash.mp4",
     type: "video",
     link: "/dashcams",
   },
