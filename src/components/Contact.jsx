@@ -99,7 +99,8 @@ export default function ContactSection() {
             <input
               type="tel"
               name="phone"
-              placeholder="+94 712 345 678"
+            placeholder="+44 7123 456 789"
+
               value={formData.phone}
               onChange={handleChange}
               required
