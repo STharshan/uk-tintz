@@ -80,12 +80,15 @@ export default function ClassOverviewTemplate({ data }) {
               />
             ) : (
               <video
-                src={data.overviewVideo}
-                controls
-                className="w-full h-180 object-cover"
-              >
-                Your browser does not support the video tag.
-              </video>
+  src={data.overviewVideo}
+  autoPlay
+  muted
+  loop
+  className="w-full h-180 object-cover"
+>
+  Your browser does not support the video tag.
+</video>
+
             )}
           </div>
 
