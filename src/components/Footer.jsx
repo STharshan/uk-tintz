@@ -28,7 +28,7 @@ export default function Footer() {
           <div>
             {/* LOGO */}
             <img
-              src="/UK_TINTz_Logo_Design-removebg-preview.png"
+              src="/logo.png"
               alt="UK Tintz Logo"
               className="h-18 w-auto mb-4"
             />

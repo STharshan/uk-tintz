@@ -66,7 +66,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between h-18 px-6 md:px-12 lg:px-20 py-3">
         {/* Logo */}
         <img
-          src="/UK_TINTz_Logo_Design-removebg-preview.png"
+          src="/logo.png"
           alt="UK Logo"
           className="w-25 h-20 object-contain"
         />

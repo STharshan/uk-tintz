@@ -16,7 +16,7 @@ export default function ContactSection() {
 
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    phone: "",
     message: "",
   });
 
@@ -30,7 +30,7 @@ export default function ContactSection() {
     e.preventDefault();
 
     const phoneNumber = "447506717961"; // Without + sign
-    const text = `New Enquiry from UKTintz%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0AMessage: ${formData.message}`;
+    const text = `New Enquiry from UKTintz%0A%0AName: ${formData.name}%0APhone: ${formData.phone}%0AMessage: ${formData.message}`;
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
 
@@ -94,22 +94,21 @@ export default function ContactSection() {
           </div>
 
           {/* Phone */}
-          <div data-aos="fade-right" data-aos-delay="700">
-  <label className="block text-sm text-gray-300 mb-1">Phone Number</label>
-  <input
-    type="tel"
-    name="phone"
-    placeholder="+94 712 345 678"
-    value={formData.phone} // make sure you have phone in your formData state
-    onChange={handleChange}
-    required
-    className="w-full px-4 py-3 rounded-md bg-zinc-900 text-white border border-zinc-700 focus:border-red-500 outline-none"
-  />
-</div>
-
+          <div data-aos="fade-right" data-aos-delay="800">
+            <label className="block text-sm text-gray-300 mb-1">Phone Number</label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+94 712 345 678"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 rounded-md bg-zinc-900 text-white border border-zinc-700 focus:border-red-500 outline-none"
+            />
+          </div>
 
           {/* Message */}
-          <div data-aos="fade-right" data-aos-delay="800">
+          <div data-aos="fade-right" data-aos-delay="900">
             <label className="block text-sm text-gray-300 mb-1">Message</label>
             <textarea
               name="message"
@@ -127,7 +126,7 @@ export default function ContactSection() {
             type="submit"
             className="relative w-full flex items-center justify-between bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300"
             data-aos="zoom-in"
-            data-aos-delay="900"
+            data-aos-delay="1000"
           >
             <span className="ml-4">Send to WhatsApp</span>
             <span className="absolute right-0.5 flex items-center justify-center bg-white text-red-600 rounded-full w-10 h-10">
@@ -135,7 +134,7 @@ export default function ContactSection() {
             </span>
           </button>
 
-          <p className="text-xs text-center dark:text-gray-300">
+          <p className="text-xs text-center text-gray-300">
             By submitting this form, you agree to us processing your details to
             respond to your enquiry. Your information is handled securely and in
             line with our Privacy Policy.
