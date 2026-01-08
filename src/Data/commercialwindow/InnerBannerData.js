@@ -3,7 +3,7 @@ export const CommercialWindowData = {
   title: "Premium Commercial Window Tinting Service",
   subtitle:
     "Reduce glare, protect interiors, enhance privacy, and improve comfort with professional commercial window tinting tailored for your business vehicles or offices.",
-  image: "s28.jpg",
+  image: "commerical_window.jpeg",
   imageAlt: "Commercial Window Tinting",
   textColor: "text-red-500",
   bgColor: "bg-black",
