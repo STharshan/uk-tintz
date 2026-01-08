@@ -3,7 +3,7 @@ export const ResidentialTintingData = {
   title: "Premium Residential Window Tinting Service",
   subtitle:
     "Keep your home cooler, protect interiors from UV damage, increase privacy, and enhance comfort with professional residential window tinting.",
-  image: "s26.jpg",
+  image: "residental_tiniting.jpeg",
   imageAlt: "Residential Window Tinting",
   textColor: "text-red-500",
   bgColor: "bg-black",

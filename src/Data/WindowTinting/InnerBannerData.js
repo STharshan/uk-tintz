@@ -3,7 +3,7 @@ export const WindowTintingData = {
   title: "Premium Window Tinting Service",
   subtitle:
     "Enhance your vehicle’s style, comfort, and protection with high-quality UV-shielding tinting solutions.",
-  image: "s4.jpg",
+  image: "window_tiniting.jpeg",
   imageAlt: "Vehicle Tinting",
   textColor: "text-red-500",
   bgColor: "bg-black",
