@@ -3,7 +3,7 @@ export const ReverseCameraData = {
   title: "Premium Reverse Camera Installation",
   subtitle:
     "Drive and park with confidence using a high-definition rear camera, seamless vehicle integration, and professional installation for a safer ride.",
-  image: "s9.jpg",
+  image: "reverse_camera.jpeg",
   imageAlt: "Reverse Camera Installation",
   textColor: "text-red-500",
   bgColor: "bg-black",

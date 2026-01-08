@@ -3,7 +3,7 @@ export const StereoFittingData = {
   title: "Premium Stereo Fitting Service",
   subtitle:
     "Upgrade your vehicle with precision-engineered audio solutions for richer sound and a flawless installation.",
-  image: "s6.jpg",
+  image: "Stereo Fitting.jpeg",
   imageAlt: "Stereo Fitting",
   textColor: "text-red-500",
   bgColor: "bg-black",

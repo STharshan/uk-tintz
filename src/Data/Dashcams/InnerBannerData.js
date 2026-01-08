@@ -3,7 +3,7 @@ export const DashcamData = {
   title: "Premium Dashcam Installation",
   subtitle:
     "Protect your vehicle and capture every drive with high-definition dashcams, seamless integration, and professional installation for peace of mind on the road.",
-  image: "s3.jpg",
+  image: "dash_cams.jpeg",
   imageAlt: "Dashcam Installation",
   textColor: "text-red-500",
   bgColor: "bg-black",

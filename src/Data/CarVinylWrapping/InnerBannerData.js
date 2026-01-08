@@ -3,7 +3,7 @@ export const CarVinylWrappingData = {
   title: "Car Vinyl Wrapping",
   subtitle:
     "Completely transform your vehicle with premium vinyl wraps, expert installation, and a flawless factory-quality finish.",
-  image: "s3.jpg",
+  image: "car_viniyl.jpeg",
   imageAlt: "Car Vinyl Wrapping",
   textColor: "text-red-500",
   bgColor: "bg-black",

@@ -3,7 +3,7 @@ export const ParkingSensorData = {
   title: "Premium Parking Sensor Installation",
   subtitle:
     "Make parking effortless and safe with precision sensors, audible alerts, and professional installation for a stress-free driving experience.",
-  image: "s17.jpg",
+  image: "parking.jpeg",
   imageAlt: "Parking Sensor Installation",
   textColor: "text-red-500",
   bgColor: "bg-black",

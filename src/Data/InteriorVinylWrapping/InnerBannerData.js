@@ -3,7 +3,7 @@ export const InteriorVinylWrappingData = {
   title: "Interior Vinyl Wrapping",
   subtitle:
     "Refresh and customise your vehicle’s interior with premium vinyl wraps, expert craftsmanship, and a flawless factory-quality finish.",
-  image: "s6.jpg",
+  image: "inter_viniyal.jpeg",
   imageAlt: "Interior Vinyl Wrapping",
   textColor: "text-red-500",
   bgColor: "bg-black",
