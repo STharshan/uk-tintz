@@ -36,6 +36,7 @@ export const SunVisorServiceData = {
   ],
 
   // Overview Image
-  overviewImage: "s15.jpg",
+ // overviewImage: "s15.jpg",
   overviewImageAlt: "Sun Visor Service Overview",
+   overviewVideo:"Sun visor.mp4"
 };

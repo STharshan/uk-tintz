@@ -36,6 +36,7 @@ export const ReverseCameraData = {
   ],
 
   // ⭐ Overview Image
-  overviewImage: "s2.jpg",
+ // overviewImage: "s2.jpg",
   overviewImageAlt: "Reverse Camera Installation Overview",
+  overviewVideo:"reverse camera.mp4"
 };

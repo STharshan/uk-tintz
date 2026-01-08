@@ -36,6 +36,7 @@ export const HeadlightTaillightTintingData = {
   ],
 
   // Overview Image
-  overviewImage: "s17.jpg",
+ // overviewImage: "s17.jpg",
   overviewImageAlt: "Headlight and Taillight Tinting Overview",
+   overviewVideo:"headlight tints.mp4"
 };

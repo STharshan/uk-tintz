@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 const services = [
    {
     name: "Window Tinting",
-    media: "/tint.mp4",
+    media: "/Window tinting.mp4",
     type: "video",
     link: "/windowtinting",
   },
@@ -31,31 +31,31 @@ const services = [
 },
 {
   name: "Car Vinyl Wrapping",
-  media: "/s17.jpg",
-  type: "image",
+  media: "/Car vinyl wrapping.mp4",
+  type: "video",
   link: "/CarVinylWrapping",
 },
 {
   name: "Sun Visors",
-  media: "/sun visor video.mp4",
+  media: "/Sun visor.mp4",
   type: "video",
   link: "/sunVisors",
 },
 {
   name: "Headlight & Taillight Tinting",
-  media: "/s18.jpg",
-  type: "image",
+  media: "/headlight tints.mp4",
+  type: "video",
   link: "/headlightTaillightTinting",
 },
   {
     name: "Dashcams",
-    media: "/dash.mp4",
+    media: "/dash cam.mp4",
     type: "video",
     link: "/dashcams",
   },
    {
     name: "Reverse Camera",
-    media: "/reversecam.mp4",
+    media: "/reverse camera.mp4",
     type: "video",
     link: "/reversecamera",
   },

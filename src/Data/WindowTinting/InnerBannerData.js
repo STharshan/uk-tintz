@@ -36,6 +36,7 @@ export const WindowTintingData = {
   ],
 
   // ⭐ Overview Image
-  overviewImage: "uk1.png",
+ // overviewImage: "uk1.png",
   overviewImageAlt: "Vehicle Tinting Overview",
+   overviewVideo:"Window tinting.mp4"
 };

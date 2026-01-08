@@ -36,6 +36,7 @@ export const StereoFittingData = {
   ],
 
   // ⭐ Overview Image
-  overviewImage: "s11.png",
+ // overviewImage: "s11.png",
   overviewImageAlt: "Stereo Fitting Overview",
+  overviewVideo:"newstereo.mp4"
 };

@@ -36,6 +36,7 @@ export const ParkingSensorData = {
   ],
 
   // ⭐ Overview Image
-  overviewImage: "s4.jpg",
+ // overviewImage: "s4.jpg",
   overviewImageAlt: "Parking Sensor Installation Overview",
+  overviewVideo:"Parking.mp4"
 };

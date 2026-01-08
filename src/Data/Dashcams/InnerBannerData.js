@@ -36,6 +36,7 @@ export const DashcamData = {
   ],
 
   // Overview Image
-  overviewImage: "s13.jpg",
+ // overviewImage: "s13.jpg",
   overviewImageAlt: "Dashcam Installation Overview",
+   overviewVideo:"dash cam.mp4"
 };

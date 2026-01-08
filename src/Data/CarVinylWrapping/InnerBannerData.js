@@ -36,6 +36,7 @@ export const CarVinylWrappingData = {
   ],
 
   // Overview Image
-  overviewImage: "s14.jpg",
+ // overviewImage: "s14.jpg",
   overviewImageAlt: "Car Vinyl Wrapping Overview",
+  overviewVideo:"Car vinyl wrapping.mp4"
 };
