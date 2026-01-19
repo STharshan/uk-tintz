@@ -6,8 +6,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 
 const BRAND_GOLD = 'red'; // your logo color
 
@@ -27,17 +26,7 @@ const images = [
 
 export default function GallerySlider() {
 
-    // ✅ Initialize AOS
-    useEffect(() => {
-        setTimeout(() => {
-            AOS.init({
-                duration: 1000,
-                once: true,
-                offset: 100,
-                easing: 'ease-in-out',
-            });
-        }, 500); // wait 0.5 seconds before initializing
-    }, []);
+    
 
     return (
         <section

@@ -1,18 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { ArrowRight } from "lucide-react";
 
 export default function ContactSection() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100,
-      easing: "ease-in-out",
-    });
-  }, []);
+
 
   const [formData, setFormData] = useState({
     name: "",

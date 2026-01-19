@@ -1,18 +1,10 @@
 "use client";
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
 
 export default function SocialInspirationSection() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true,
-      offset: 100,
-      easing: "ease-in-out",
-    });
-  }, []);
+
 
   const tickerText = "Follow us for Car Inspiration • ";
 

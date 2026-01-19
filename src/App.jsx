@@ -1,4 +1,8 @@
+
+import React, { useEffect } from "react"; // Added useEffect
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS styles
 import Home from "./pages/Home";
 import Dashcams from "./pages/Dashcams";
 import Commercialwindow from "./pages/Commercialwindow";
@@ -19,6 +23,15 @@ import HeadlightTaillightTinting from "./pages/HeadlightTaillightTinting"
 import SunVisors from "./pages/SunVisors"
 import CarVinylWrapping from "./pages/CarVinylWrapping"
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+      once: true,
+      easing: "ease-out",
+      offset: 100,
+    });
+  }, []);
   return (
     <Router>
       <ScrollToTop />

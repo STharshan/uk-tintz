@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 const HeroCurasol = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -38,9 +37,7 @@ const HeroCurasol = () => {
   const prevSlide = () =>
     setSlideIndex((slideIndex - 1 + popupImages.length) % popupImages.length);
 
-  useEffect(() => {
-    AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
-  }, []);
+ 
 
   const projects = [
     {

@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 const services = [
    {
@@ -84,13 +83,7 @@ const services = [
 ];
 
 const OurServices = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100,
-    });
-  }, []);
+
 
   return (
     <section className="w-full bg-black text-white py-12 sm:py-16 md:py-20 overflow-x-hidden">

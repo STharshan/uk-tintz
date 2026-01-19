@@ -1,17 +1,10 @@
 "use client";
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { CheckCircle } from "lucide-react";
 
 export default function HeroSection() {
-  useEffect(() => {
-    AOS.init({
-      duration: 900,
-      once: true,
-      easing: "ease-out",
-    });
-  }, []);
+
 
   return (
     <div className="relative min-h-screen overflow-hidden text-white">

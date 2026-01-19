@@ -1,18 +1,10 @@
 "use client";
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { Star } from "lucide-react";
 
 export default function StatsSection() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100,
-      easing: "ease-in-out",
-    });
-  }, []);
+
 
   // Carbon Fiber Style (your original style preserved)
   const carbonFiberStyle = {
