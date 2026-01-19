@@ -74,6 +74,7 @@ export default function Review() {
           src="logo.png"
           alt="Hear it from our clients"
           className="w-full  max-w-6xl object-contain "
+           loading="lazy"
         />
       </div>
 

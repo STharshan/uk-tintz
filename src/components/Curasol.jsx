@@ -243,6 +243,7 @@ const HeroCurasol = () => {
         src={project.beforeImage}
         alt=""
         className="w-full h-full object-cover opacity-70"
+         loading="lazy"
       />
     </div>
     <div className="rounded-2xl overflow-hidden bg-white/10 aspect-4/3">
@@ -250,6 +251,7 @@ const HeroCurasol = () => {
         src={project.afterImage}
         alt=""
         className="w-full h-full object-cover"
+         loading="lazy"
       />
     </div>
   </div>
@@ -324,6 +326,7 @@ const HeroCurasol = () => {
                 src={popupImages[slideIndex]}
                 alt="slide"
                 className="w-full h-full object-cover"
+                 loading="lazy"
               />
 
               <button

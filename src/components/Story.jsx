@@ -35,11 +35,13 @@ export default function StatsSection() {
           src="https://framerusercontent.com/images/ZEh9xZnnCBZe9ERkdh9UXNmGAYQ.png"
           alt="Shape"
           className="w-[260px] md:w-[360px] rotate-90 object-contain"
+           loading="lazy"
         />
         <img
           src="https://framerusercontent.com/images/ZEh9xZnnCBZe9ERkdh9UXNmGAYQ.png"
           alt="Shape"
           className="w-[260px] md:w-[360px] -rotate-90 object-contain"
+           loading="lazy"
         />
       </div>
 

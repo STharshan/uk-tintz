@@ -41,6 +41,7 @@ export default function GallerySlider() {
                         src="/logo.png"
                         alt="UK Tintz Logo"
                         className="w-[150px] md:w-[200px] object-contain"
+                         loading="lazy"
                     />
                 </div>
 
@@ -66,6 +67,7 @@ export default function GallerySlider() {
                                         src={src}
                                         alt={`Gallery Image ${idx + 1}`}
                                         className="w-full h-[350px] object-cover"
+                                         loading="lazy"
                                     />
                                 </div>
                             </SwiperSlide>

@@ -76,6 +76,7 @@ export default function ClassOverviewTemplate({ data }) {
               <img
                 src={data.overviewImage}
                 alt={data.overviewImageAlt}
+                 loading="lazy"
                 className="w-full h-full object-cover"
               />
             ) : (

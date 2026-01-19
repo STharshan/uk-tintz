@@ -117,6 +117,7 @@ const OurServices = () => {
                 src={service.media}
                 alt={service.name}
                 className="w-full h-full object-cover rounded-xl shadow-lg"
+                 loading="lazy"
               />
             ) : (
               <video

@@ -31,6 +31,7 @@ export default function Footer() {
               src="/logo.png"
               alt="UK Tintz Logo"
               className="h-18 w-auto mb-4"
+               loading="lazy"
             />
 
             <p className="text-gray-400 mb-4 leading-relaxed">

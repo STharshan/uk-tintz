@@ -43,6 +43,7 @@ export default function SocialInspirationSection() {
             src="/uk1.png"
             alt="Car Interior"
             className="w-[250px] h-[250px] md:w-[380px] md:h-[380px] object-cover rounded-3xl shadow-2xl border border-white/10"
+             loading="lazy"
           />
         </div>
 
@@ -97,6 +98,7 @@ export default function SocialInspirationSection() {
             src="/uk2.png"
             alt="Car Exterior"
             className="w-[250px] h-[250px] md:w-[380px] md:h-[380px] object-cover rounded-3xl shadow-2xl border border-white/10"
+             loading="lazy"
           />
         </div>
       </div>

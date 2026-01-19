@@ -23,6 +23,7 @@ export default function InnerBannerSection({ data }) {
           <img
             src={data.image}
             alt={data.imageAlt}
+            loading="lazy"
             className="w-full h-[300px] sm:h-[380px] md:h-[460px] object-cover rounded-xl shadow-xl"
           />
         </div>

@@ -69,6 +69,7 @@ const Navbar = () => {
           src="/logo.png"
           alt="UK Logo"
           className="w-25 h-20 object-contain"
+           loading="lazy"
         />
 
         {/* Desktop Menu */}
