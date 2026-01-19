@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+/* Global Animation Keyframes */
+@keyframes moveLeftToRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes moveRightToLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Animation Utilities */
+.animate-leftToRight {
+  display: inline-block;
+  animation: moveLeftToRight 25s linear infinite;
+}
+
+.animate-rightToLeft {
+  display: inline-block;
+  animation: moveRightToLeft 25s linear infinite;
+}
+
+/* Ensure the ticker doesn't wrap */
+.ticker-wrapper {
+  display: flex;
+  white-space: nowrap;
+}
