@@ -36,7 +36,7 @@ export default function Review() {
 
  const testimonials = [
   {
-    text: "I’ve had multiple cars tinted with UkTints and the service is always great! They have always got me booked in within a timely manner and I’m always satisfied with the end results! Prices are fair. Communication is great. I would highly recommend and I wouldn’t take my cars anywhere else personally! Thank you UKTints and Pete and keep up the good work 👊🏻",
+    text: "I’ve had multiple cars tinted with UkTints and the service is always great! They have always got me booked in within a timely manner and I’m always satisfied with the end results! Prices are fair. Communication is great. I would highly recommend and I wouldn’t take my cars anywhere else personally! Thank you UKTints and Pete and keep up the good work ",
     name: "Louise Knight",
     initials: "LK",
     bg: "#FFD7D7",
@@ -48,13 +48,13 @@ export default function Review() {
     bg: "#D7FFD7",
   },
   {
-    text: "Great Job, highly recommend, quick turnaround, helpful / knowledgeable, Rear windows / sunstrip, cheers 🙌",
+    text: "Great Job, highly recommend, quick turnaround, helpful / knowledgeable, Rear windows / sunstrip, cheers ",
     name: "Lance Ash",
     initials: "LA",
     bg: "#D7E0FF",
   },
   {
-    text: "Excellent service and great value for money. Been to Pete for a few of my cars now and always does an outstanding job. Highly recommend 👌",
+    text: "Excellent service and great value for money. Been to Pete for a few of my cars now and always does an outstanding job. Highly recommend ",
     name: "Katy Smith",
     initials: "KS",
     bg: "#FFF5D7",
