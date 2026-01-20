@@ -10,7 +10,7 @@ import GallerySlider from '../components/GallerySlider'
 import Review from "../components/review"
 const Home = () => {
     return (
-        <div>
+        <div className='bg-black'>
             <HeroSection />
             <HeroCurasol />
             <OurServices />

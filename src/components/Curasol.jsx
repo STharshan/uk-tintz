@@ -57,7 +57,7 @@ const HeroCurasol = () => {
       snippet: "Reduce glare and heat while improving privacy and security.",
       beforeImage: "/s27.jpg",
       afterImage: "/s28.jpg",
-      popupImage: ["/s27.jpg", "/s28.jpg"],
+      popupImage: ["/s27.jpg", "/s28.jpg",'commercial tinting1.jpeg','commercial tinting2.jpeg','commercial tinting3.jpeg'],
       link: "/projects/fixture-fixer-operation",
     },
     {
@@ -68,6 +68,11 @@ const HeroCurasol = () => {
       beforeImage: "/After residential tints.jpeg",
       afterImage: "/before residential tints.jpeg",
        popupImage: [
+        'residential.jpeg',
+        'residential1.jpeg',
+        'residential2.jpeg',
+        'residential3.jpeg',
+        'residential4.jpeg',
         "/s26.jpg",
         "/s23.jpg",
         "/r1.jpeg",
@@ -99,6 +104,9 @@ const HeroCurasol = () => {
       popupImage: [
         "/s5.jpg",
         "/s6.jpg",
+        'interior vinyl.jpeg',
+        'interior vinyl1.jpeg',
+        'interior vinyl2.jpeg',
        
       ],
       link: "/projects/carpentry-solutions-project",
