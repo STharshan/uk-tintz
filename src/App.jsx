@@ -18,6 +18,7 @@ import TermsConditions from "./components/Term";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import GDPRConsent from "./components/GDPRButton";
 
+import FloatingCallButton from "./components/FloatingCallButton"
 import InteriorVinylWrapping from "./pages/InteriorVinylWrapping"
 import HeadlightTaillightTinting from "./pages/HeadlightTaillightTinting"
 import SunVisors from "./pages/SunVisors"
@@ -54,6 +55,7 @@ function App() {
       </Routes>
       <Footer />
       <GDPRConsent />
+      <FloatingCallButton/>
     </Router>
   );
 }
