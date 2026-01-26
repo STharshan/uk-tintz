@@ -2,7 +2,7 @@ import React from 'react';
 import { FaPhoneAlt } from 'react-icons/fa'; // Ensure react-icons is installed
 
 const FloatingCallButton = () => {
-  const phoneNumber = "+447123456789"; // Your placeholder number
+  const phoneNumber = "+447506717961"; // Your placeholder number
 
   return (
     <a
