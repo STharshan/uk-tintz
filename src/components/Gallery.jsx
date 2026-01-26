@@ -10,7 +10,7 @@ export default function SocialInspirationSection() {
 
   return (
     <section className="relative w-full h-screen bg-black overflow-hidden flex items-center justify-center" id="social">
-      
+
       {/* FIRST MOVING TEXT (TOP) */}
       <div className="absolute top-[30%] w-full overflow-hidden z-0 pointer-events-none">
         <div className="animate-leftToRight ticker-wrapper">
@@ -39,12 +39,17 @@ export default function SocialInspirationSection() {
       >
         {/* LEFT IMAGE */}
         <div className="relative" data-aos="fade-right" data-aos-delay="100">
-          <img
-            src="/uk1.png"
-            alt="Car Interior"
+          <video
+            src="/uk6.mp4" // Replace with your video path
+            poster="/uk1.png"      // This shows the image while the video loads
             className="w-[250px] h-[250px] md:w-[380px] md:h-[380px] object-cover rounded-3xl shadow-2xl border border-white/10"
-             loading="lazy"
-          />
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* SOCIAL ICONS CENTER */}
@@ -94,12 +99,17 @@ export default function SocialInspirationSection() {
 
         {/* RIGHT IMAGE */}
         <div className="relative" data-aos="fade-left" data-aos-delay="200">
-          <img
-            src="/uk2.png"
-            alt="Car Exterior"
+          <video
+            src="/uk4.mp4" // Replace with your video path
+            poster="/uk2.png"      // This shows the image while the video loads
             className="w-[250px] h-[250px] md:w-[380px] md:h-[380px] object-cover rounded-3xl shadow-2xl border border-white/10"
-             loading="lazy"
-          />
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </section>

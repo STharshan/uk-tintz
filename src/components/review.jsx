@@ -42,9 +42,9 @@ export default function Review() {
     bg: "#FFD7D7",
   },
   {
-    text: "Great service, had my fiesta tinted and also a sunstrip fitted. Pete did a great job and its truly changed the look of my car, very professional and allowed me to wait while it was done. Would definitely recommend - thankyou very much",
-    name: "Emma Attaway-Smith",
-    initials: "EAS",
+    text: "Just had the windows tinted on my Skyline GT-R, super happy with their work, would recommend to anyone thumbs up from me",
+    name: "Bobby radwan",
+    initials: "BR",
     bg: "#D7FFD7",
   },
   {

@@ -19,7 +19,7 @@ export default function HeroSection() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/80" />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* HERO CONTENT */}
       <section className="relative z-10 min-h-screen flex items-center justify-center px-6">
@@ -32,7 +32,7 @@ export default function HeroSection() {
           </p>
 
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-            Your Trusted Automotive <br />
+            Nottingham’s Trusted Automotive <br />
             <span className="text-red-500">Tinting Expert</span>
           </h1>
 
