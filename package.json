@@ -1,39 +1,68 @@
 {
   "name": "uk",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npx react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "headless": true,
+    "crawl": true,
+    "waitFor": 3000,
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-gpu"
+    ],
+    "routes": [
+      "/",
+      "/services",
+      "/windowtinting",
+      "/stereofitting",
+      "/reversecamera",
+      "/parkingsensors",
+      "/dashcams",
+      "/commercialwindow",
+      "/residentialtinting",
+      "/CarVinylWrapping",
+      "/interiorVinylWrapping",
+      "/headlightTaillightTinting",
+      "/sunVisors"
+    ]
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "aos": "^2.3.4",
+    "glob": "^13.0.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.552.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "mkdirp": "^3.0.1",
+    "puppeteer": "^24.36.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.9.5",
+    "react-router-dom": "^6.14.2",
     "react-router-hash-link": "^2.4.3",
+    "react-snap": "^1.23.0",
+    "rimraf": "^6.1.2",
     "swiper": "^12.0.3",
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
-    "@eslint/js": "^9.36.0",
-    "@types/react": "^19.1.16",
-    "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.4",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.36.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "globals": "^16.4.0",
-    "vite": "npm:rolldown-vite@7.1.14"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@7.1.14"
+    "vite": "^5.4.11"
   }
 }

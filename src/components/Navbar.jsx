@@ -64,20 +64,23 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 ${carbonFiberStyle}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between h-18 px-6 md:px-12 lg:px-20 py-3">
-        {/* Logo */}
-        <img
-          src="/logo.png"
-          alt="UK Logo"
-          className="w-25 h-20 object-contain"
-           loading="lazy"
-        />
+        
+        {/* Logo - SEO Optimized */}
+        <Link to="/">
+          <img
+            src="/logo.png"
+            alt="UK Tintz - Professional Window Tinting and Car Wrapping Nottingham"
+            className="w-25 h-20 object-contain"
+            loading="eager"
+          />
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((item) => {
             if (item.name === "Services") {
               return (
-                <div key={item.name} ref={servicesRef} className="relative">
+                <div key={item.name} ref={servicesRef} className="relative group">
                   <button
                     onClick={() => setDesktopServicesOpen(!desktopServicesOpen)}
                     className="flex items-center gap-1 font-semibold text-white hover:text-red-500 transition-colors"
@@ -85,15 +88,17 @@ const Navbar = () => {
                     {item.name} <FiChevronDown />
                   </button>
 
+                  {/* Desktop Dropdown */}
                   {desktopServicesOpen && (
                     <div
-                      className={`absolute left-0 mt-2 w-48 z-50 p-2 ${carbonFiberStyle}`}
+                      className={`absolute left-0 mt-2 w-56 z-50 p-2 ${carbonFiberStyle} animate-fadeIn`}
                     >
                       {servicesLinks.map((service) => (
                         <Link
                           key={service.name}
                           to={service.href}
-                          className="block px-4 py-2 text-gray-200 hover:text-red-500 rounded-md"
+                          onClick={() => setDesktopServicesOpen(false)}
+                          className="block px-4 py-2 text-gray-200 hover:text-red-500 hover:bg-white/5 rounded-md transition-all"
                         >
                           {service.name}
                         </Link>
@@ -125,7 +130,8 @@ const Navbar = () => {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#2c2c2c] p-2 rounded-full"
+              aria-label="Social Link"
+              className="bg-[#2c2c2c] p-2 rounded-full border border-white/5 hover:border-red-500/50 transition-all"
             >
               {item.icon}
             </a>
@@ -149,37 +155,41 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="bg-red-500 p-2 rounded-full text-xl"
+            aria-label="Toggle Menu"
+            className="bg-red-500 p-2 rounded-full text-xl text-white shadow-lg active:scale-95 transition-transform"
           >
             {menuOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Drawer */}
       {menuOpen && (
-        <div className={`lg:hidden mt-2 p-4 space-y-3 ${carbonFiberStyle}`}>
+        <div className={`lg:hidden mt-2 p-4 space-y-3 ${carbonFiberStyle} animate-slideDown`}>
           {navLinks.map((item) => {
             if (item.name === "Services") {
               return (
                 <div key={item.name} className="space-y-2">
                   <button
                     onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className="w-full flex justify-between items-center py-2 text-gray-200 hover:text-red-500 font-semibold border-b border-red-500/20 last:border-0 transition-colors"
+                    className="w-full flex justify-between items-center py-2 text-gray-200 hover:text-red-500 font-semibold border-b border-red-500/20 transition-colors"
                   >
-                    {item.name} <FiChevronDown />
+                    {item.name} <FiChevronDown className={`transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
                   </button>
-                  {mobileServicesOpen &&
-                    servicesLinks.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.href}
-                        onClick={() => setMenuOpen(false)}
-                        className="block pl-6 py-2 text-gray-200 hover:text-red-500 transition-colors"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
+                  {mobileServicesOpen && (
+                    <div className="grid grid-cols-1 gap-1 pl-4">
+                      {servicesLinks.map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.href}
+                          onClick={() => setMenuOpen(false)}
+                          className="block py-2 text-gray-300 hover:text-red-500 transition-colors border-l border-red-500/20 pl-4"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               );
             } else {
@@ -189,7 +199,7 @@ const Navbar = () => {
                   smooth
                   to={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block py-2 text-gray-200 hover:text-red-500 border-b border-red-500/20 last:border-0 transition-colors"
+                  className="block py-2 text-gray-200 hover:text-red-500 border-b border-red-500/20 last:border-0 transition-colors font-semibold"
                 >
                   {item.name}
                 </HashLink>
@@ -198,6 +208,16 @@ const Navbar = () => {
           })}
         </div>
       )}
+
+      {/* CRITICAL FOR SEO: 
+          Intha hidden links 'react-snap' crawler-ukku dropdown open pannamaalayae 
+          ella page-aiyum kandupikka uthavum.
+      */}
+      <div className="sr-only opacity-0 absolute w-0 h-0 overflow-hidden" aria-hidden="true">
+        {servicesLinks.map((service) => (
+          <Link key={service.name} to={service.href}>{service.name} Nottingham</Link>
+        ))}
+      </div>
     </nav>
   );
 };
