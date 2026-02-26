@@ -1,67 +1,49 @@
-"use client";
-import React, { useEffect, useState } from "react";
-
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
 export default function ContactSection() {
-
-
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     message: "",
   });
 
-  // Update input fields
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // WhatsApp Send
   const sendToWhatsApp = (e) => {
     e.preventDefault();
 
-    const phoneNumber = "447506717961"; // Without + sign
+    const phoneNumber = "447506717961"; 
     const text = `New Enquiry from UKTintz%0A%0AName: ${formData.name}%0APhone: ${formData.phone}%0AMessage: ${formData.message}`;
-
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
 
+    // Open WhatsApp
     window.open(whatsappURL, "_blank");
+
+    // RESET FORM HERE
+    setFormData({
+      name: "",
+      phone: "",
+      message: "",
+    });
   };
 
   return (
     <section
       id="contact"
       className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center px-6 py-20"
-      style={{
-        backgroundImage: "url('/s22.jpg')",
-      }}
+      style={{ backgroundImage: "url('/s22.jpg')" }}
       data-aos="fade-up"
     >
-      {/* Overlay */}
-      <div
-        className="absolute inset-0 bg-black/60"
-        data-aos="fade-in"
-        data-aos-delay="100"
-      ></div>
+      <div className="absolute inset-0 bg-black/60" data-aos="fade-in" data-aos-delay="100"></div>
 
-      <div
-        className="relative z-10 w-full max-w-md text-center text-white"
-        data-aos="zoom-in"
-        data-aos-delay="200"
-      >
-        <p
-          className="uppercase text-red-500 font-semibold tracking-widest mb-2"
-          data-aos="fade-down"
-          data-aos-delay="300"
-        >
+      <div className="relative z-10 w-full max-w-md text-center text-white" data-aos="zoom-in" data-aos-delay="200">
+        <p className="uppercase text-red-500 font-semibold tracking-widest mb-2" data-aos="fade-down" data-aos-delay="300">
           Contact
         </p>
-        <h2
-          className="text-3xl sm:text-4xl font-extrabold mb-10 leading-tight"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-10 leading-tight" data-aos="fade-up" data-aos-delay="400">
           Lets Get Customising
         </h2>
 
@@ -71,7 +53,6 @@ export default function ContactSection() {
           data-aos="fade-up"
           data-aos-delay="500"
         >
-          {/* Name */}
           <div data-aos="fade-right" data-aos-delay="600">
             <label className="block text-sm text-gray-300 mb-1">Name</label>
             <input
@@ -85,14 +66,12 @@ export default function ContactSection() {
             />
           </div>
 
-          {/* Phone */}
           <div data-aos="fade-right" data-aos-delay="800">
             <label className="block text-sm text-gray-300 mb-1">Phone Number</label>
             <input
               type="tel"
               name="phone"
-            placeholder="+44 7123 456 789"
-
+              placeholder="+44 7123 456 789"
               value={formData.phone}
               onChange={handleChange}
               required
@@ -100,7 +79,6 @@ export default function ContactSection() {
             />
           </div>
 
-          {/* Message */}
           <div data-aos="fade-right" data-aos-delay="900">
             <label className="block text-sm text-gray-300 mb-1">Message</label>
             <textarea
@@ -114,7 +92,6 @@ export default function ContactSection() {
             ></textarea>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="relative w-full flex items-center justify-between bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300"

@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect } from "react";
+
 import { Link } from "react-router-dom";
 
 
@@ -72,14 +71,6 @@ const services = [
     link: "/stereofitting",
   },
  
- 
- 
- 
-
-  
-
-
-
 ];
 
 const OurServices = () => {

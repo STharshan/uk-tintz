@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+
+
 
 export default function ClassOverviewTemplate({ data }) {
   // Carbon Fiber Card Style
@@ -71,24 +71,24 @@ export default function ClassOverviewTemplate({ data }) {
           </div>
 
           {/* Image */}
-         <div className="rounded-xl overflow-hidden shadow-md h-full">
+          <div className="rounded-xl overflow-hidden shadow-md h-full">
             {data.overviewImage && data.overviewImage !== "null" ? (
               <img
                 src={data.overviewImage}
                 alt={data.overviewImageAlt}
-                 loading="lazy"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             ) : (
               <video
-  src={data.overviewVideo}
-  autoPlay
-  muted
-  loop
-  className="w-full h-180 object-cover"
->
-  Your browser does not support the video tag.
-</video>
+                src={data.overviewVideo}
+                autoPlay
+                muted
+                loop
+                className="w-full h-180 rounded-xl object-cover"
+              >
+                Your browser does not support the video tag.
+              </video>
 
             )}
           </div>

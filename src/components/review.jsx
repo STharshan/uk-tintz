@@ -1,5 +1,5 @@
-"use client";
-import React, { useRef, useLayoutEffect } from "react";
+
+import { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -34,32 +34,32 @@ export default function Review() {
     return () => ctx.revert();
   }, []);
 
- const testimonials = [
-  {
-    text: "I’ve had multiple cars tinted with UkTints and the service is always great! They have always got me booked in within a timely manner and I’m always satisfied with the end results! Prices are fair. Communication is great. I would highly recommend and I wouldn’t take my cars anywhere else personally! Thank you UKTints and Pete and keep up the good work ",
-    name: "Louise Knight",
-    initials: "LK",
-    bg: "#FFD7D7",
-  },
-  {
-    text: "Just had the windows tinted on my Skyline GT-R, super happy with their work, would recommend to anyone thumbs up from me",
-    name: "Bobby radwan",
-    initials: "BR",
-    bg: "#D7FFD7",
-  },
-  {
-    text: "Great Job, highly recommend, quick turnaround, helpful / knowledgeable, Rear windows / sunstrip, cheers ",
-    name: "Lance Ash",
-    initials: "LA",
-    bg: "#D7E0FF",
-  },
-  {
-    text: "Excellent service and great value for money. Been to Pete for a few of my cars now and always does an outstanding job. Highly recommend ",
-    name: "Katy Smith",
-    initials: "KS",
-    bg: "#FFF5D7",
-  },
-];
+  const testimonials = [
+    {
+      text: "I’ve had multiple cars tinted with UkTints and the service is always great! They have always got me booked in within a timely manner and I’m always satisfied with the end results! Prices are fair. Communication is great. I would highly recommend and I wouldn’t take my cars anywhere else personally! Thank you UKTints and Pete and keep up the good work ",
+      name: "Louise Knight",
+      initials: "LK",
+      bg: "#FFD7D7",
+    },
+    {
+      text: "Just had the windows tinted on my Skyline GT-R, super happy with their work, would recommend to anyone thumbs up from me",
+      name: "Bobby radwan",
+      initials: "BR",
+      bg: "#D7FFD7",
+    },
+    {
+      text: "Great Job, highly recommend, quick turnaround, helpful / knowledgeable, Rear windows / sunstrip, cheers ",
+      name: "Lance Ash",
+      initials: "LA",
+      bg: "#D7E0FF",
+    },
+    {
+      text: "Excellent service and great value for money. Been to Pete for a few of my cars now and always does an outstanding job. Highly recommend ",
+      name: "Katy Smith",
+      initials: "KS",
+      bg: "#FFF5D7",
+    },
+  ];
 
 
   return (
@@ -74,7 +74,7 @@ export default function Review() {
           src="logo.png"
           alt="Hear it from our clients"
           className="w-full  max-w-6xl object-contain "
-           loading="lazy"
+          loading="lazy"
         />
       </div>
 
@@ -97,7 +97,6 @@ export default function Review() {
             className="w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 
             shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8 opacity-0 transform translate-y-8"
           >
-            <p className="text-lg md:text-xl font-semibold mb-3">{item.title}</p>
             <p className="text-sm md:text-base opacity-80 mb-4">{item.text}</p>
             <div className="flex items-center gap-3">
               <span
@@ -115,11 +114,11 @@ export default function Review() {
       {/* === CTA BUTTON TO GOOGLE REVIEWS === */}
       <div className="relative z-10 pb-28 text-center">
         <a
-          href="https://www.google.com/search?sca_esv=56cc1d46b226e482&rlz=1C1CHBD_enLK1099LK1099&sxsrf=AE3TifMwurdXdko4HymvNJhkyaoc47mzZw:1764341011910&si=AMgyJEuzsz2NflaaWzrzdpjxXXRaJ2hfdMsbe_mSWso6src8s18sUqegxATttFUzWbfC-sPFa0JeF_BhrRM-tPzZTKK4HLcoV8Mz-RNYsSbRB_qF7JD1DmxcLUeEvS8gqV1EyhOn7tbN&q=UKTintz+Reviews&sa=X&ved=2ahUKEwjE95u6ipWRAxU8bvUHHZN8B7AQ0bkNegQIIxAE&biw=1536&bih=695&dpr=1.25"
+          href="https://www.google.com/search?q=UKTintz+Reviews"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-10 py-3 text-lg font-semibold rounded-full 
-          bg-[#D20000] hover:bg-white text-black transition-all duration-300 shadow-lg"
+    bg-[#D20000] hover:bg-white text-black transition-all duration-300 shadow-lg"
         >
           Google Review
         </a>

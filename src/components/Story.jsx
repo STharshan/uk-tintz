@@ -1,5 +1,3 @@
-"use client";
-import React, { useEffect } from "react";
 
 import { Star } from "lucide-react";
 
@@ -32,13 +30,13 @@ export default function StatsSection() {
       {/* Background arrows */}
       <div className="absolute inset-0 flex justify-between opacity-[0.04] pointer-events-none">
         <img
-          src="https://framerusercontent.com/images/ZEh9xZnnCBZe9ERkdh9UXNmGAYQ.png"
+          src="s.png"
           alt="Shape"
           className="w-[260px] md:w-[360px] rotate-90 object-contain"
            loading="lazy"
         />
         <img
-          src="https://framerusercontent.com/images/ZEh9xZnnCBZe9ERkdh9UXNmGAYQ.png"
+          src="s.png"
           alt="Shape"
           className="w-[260px] md:w-[360px] -rotate-90 object-contain"
            loading="lazy"
@@ -48,7 +46,7 @@ export default function StatsSection() {
       {/* Stats Content */}
       <div className="relative z-10 container mx-auto px-6 md:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center text-white">
 
-        {/* 1️⃣ Experience Years */}
+        {/* Experience Years */}
         <div className={glowWrapper} data-aos="fade-up" data-aos-delay="100">
           <div style={carbonFiberStyle}>
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
@@ -61,7 +59,7 @@ export default function StatsSection() {
           </div>
         </div>
 
-        {/* 2️⃣ 5-Star Rating */}
+        {/* 5-Star Rating */}
         <div className={glowWrapper} data-aos="fade-up" data-aos-delay="300">
           <div style={carbonFiberStyle}>
             <h3 className="flex items-center justify-center gap-2 text-3xl sm:text-4xl md:text-5xl font-extrabold">
@@ -75,7 +73,7 @@ export default function StatsSection() {
           </div>
         </div>
 
-        {/* 3️⃣ Completed Jobs */}
+        {/* Completed Jobs */}
         <div className={glowWrapper} data-aos="fade-up" data-aos-delay="500">
           <div style={carbonFiberStyle}>
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">

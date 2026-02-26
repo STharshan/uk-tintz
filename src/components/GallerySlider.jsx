@@ -1,6 +1,3 @@
-'use client';
-
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -15,7 +12,6 @@ export default function GallerySlider() {
         { type: 'video', src: '/uk1.mp4', poster: '/s10.jpg' },
         { type: 'image', src: '/s11.jpg' },
         { type: 'video', src: '/uk2.mp4', poster: '/s12.jpg' },
-        { type: 'image', src: '/s12.jpg' },
         { type: 'video', src: '/uk3.mp4', poster: '/s13.jpg' },
         { type: 'image', src: '/s13.jpg' },
         { type: 'video', src: '/uk5.mp4', poster: '/s14.jpg' },

@@ -1,5 +1,5 @@
-"use client";
-import React, { useState, useEffect, useRef } from "react";
+
+import { useState, useEffect, useRef } from "react";
 import { ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 
@@ -7,12 +7,12 @@ const HeroCurasol = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const scrollContainerRef = useRef(null);
 
-  // ⭐ Popup State
+  // Popup State
   const [showPopup, setShowPopup] = useState(false);
   const [popupImages, setPopupImages] = useState([]);
   const [slideIndex, setSlideIndex] = useState(0);
 
-  // ⭐ OPEN POPUP WITH ALL IMAGES
+  // OPEN POPUP WITH ALL IMAGES
   const openPopup = (project) => {
     const images = [];
 
@@ -37,7 +37,7 @@ const HeroCurasol = () => {
   const prevSlide = () =>
     setSlideIndex((slideIndex - 1 + popupImages.length) % popupImages.length);
 
- 
+
 
   const projects = [
     {
@@ -48,7 +48,6 @@ const HeroCurasol = () => {
       beforeImage: "/s5.jpg",
       afterImage: "/s4.jpg",
       popupImage: ["/s5.jpg", "/s4.jpg"],
-      link: "/projects/flooring-makeover-project",
     },
     {
       id: "2",
@@ -57,8 +56,7 @@ const HeroCurasol = () => {
       snippet: "Reduce glare and heat while improving privacy and security.",
       beforeImage: "/s27.jpg",
       afterImage: "/s28.jpg",
-      popupImage: ["/s27.jpg", "/s28.jpg",'commercial tinting1.jpeg','commercial tinting2.jpeg','commercial tinting3.jpeg'],
-      link: "/projects/fixture-fixer-operation",
+      popupImage: ["/s27.jpg", "/s28.jpg", 'commercial tinting1.jpeg', 'commercial tinting2.jpeg', 'commercial tinting3.jpeg'],
     },
     {
       id: "3",
@@ -67,7 +65,7 @@ const HeroCurasol = () => {
       snippet: "Improve home comfort, privacy, and energy efficiency.",
       beforeImage: "/After residential tints.jpeg",
       afterImage: "/before residential tints.jpeg",
-       popupImage: [
+      popupImage: [
         'residential_new.jpeg',
         'residential.jpeg',
         'residential_new1.jpeg',
@@ -86,7 +84,6 @@ const HeroCurasol = () => {
         "/r5.jpeg",
         "/r6.jpeg",
       ],
-      link: "/projects/electrical-upgrade-initiative",
     },
     {
       id: "4",
@@ -96,7 +93,6 @@ const HeroCurasol = () => {
       beforeImage: "/s1.jpg",
       afterImage: "/s13.jpg",
       popupImage: ["/s1.jpg", "/s13.jpg"],
-      link: "/projects/renovation-revamp-venture",
     },
     {
       id: "5",
@@ -111,9 +107,8 @@ const HeroCurasol = () => {
         'interior vinyl.jpeg',
         'interior vinyl1.jpeg',
         'interior vinyl2.jpeg',
-       
+
       ],
-      link: "/projects/carpentry-solutions-project",
     },
   ];
 
@@ -235,69 +230,68 @@ const HeroCurasol = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >
-               <div
-  className={`rounded-3xl overflow-hidden transition-all duration-500 border ${
-    index === activeIndex
-      ? "border-white/30 shadow-2xl shadow-red-600/20"
-      : "border-white/20 shadow-lg"
-  }`}
-  style={{
-    minHeight: "480px",
-    backgroundImage:
-      "repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 4px, #111 4px, #111 8px)",
-    boxShadow: index === activeIndex ? "0 20px 50px rgba(255,0,0,0.2)" : "0 6px 18px rgba(0,0,0,0.45)",
-  }}
->
-  {/* Images */}
-  <div className="grid grid-cols-2 gap-3 p-5">
-    <div className="rounded-2xl overflow-hidden bg-white/10 aspect-4/3">
-      <img
-        src={project.beforeImage}
-        alt=""
-        className="w-full h-full object-cover opacity-70"
-         loading="lazy"
-      />
-    </div>
-    <div className="rounded-2xl overflow-hidden bg-white/10 aspect-4/3">
-      <img
-        src={project.afterImage}
-        alt=""
-        className="w-full h-full object-cover"
-         loading="lazy"
-      />
-    </div>
-  </div>
+                <div
+                  className={`rounded-3xl overflow-hidden transition-all duration-500 border ${index === activeIndex
+                      ? "border-white/30 shadow-2xl shadow-red-600/20"
+                      : "border-white/20 shadow-lg"
+                    }`}
+                  style={{
+                    minHeight: "480px",
+                    backgroundImage:
+                      "repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 4px, #111 4px, #111 8px)",
+                    boxShadow: index === activeIndex ? "0 20px 50px rgba(255,0,0,0.2)" : "0 6px 18px rgba(0,0,0,0.45)",
+                  }}
+                >
+                  {/* Images */}
+                  <div className="grid grid-cols-2 gap-3 p-5">
+                    <div className="rounded-2xl overflow-hidden bg-white/10 aspect-4/3">
+                      <img
+                        src={project.beforeImage}
+                        alt=""
+                        className="w-full h-full object-cover opacity-70"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="rounded-2xl overflow-hidden bg-white/10 aspect-4/3">
+                      <img
+                        src={project.afterImage}
+                        alt=""
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-  {/* Content */}
-  <div className="px-6 pb-6">
-    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 uppercase tracking-tight leading-snug">
-      {project.title}
-    </h3>
-    <p className="text-gray-200 text-sm sm:text-base md:text-base leading-relaxed mb-4 sm:mb-6">
-      {project.snippet}
-    </p>
+                  {/* Content */}
+                  <div className="px-6 pb-6">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 uppercase tracking-tight leading-snug">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-200 text-sm sm:text-base md:text-base leading-relaxed mb-4 sm:mb-6">
+                      {project.snippet}
+                    </p>
 
-    {/* Footer */}
-    <div className="flex items-center justify-between pt-4 border-t border-white/10">
-      <div className="flex items-center gap-2">
-        <div className="w-1 h-8 bg-red-600 rounded-full"></div>
-        <span className="text-white font-medium text-sm">
-          {project.category}
-        </span>
-      </div>
+                    {/* Footer */}
+                    <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                      <div className="flex items-center gap-2">
+                        <div className="w-1 h-8 bg-red-600 rounded-full"></div>
+                        <span className="text-white font-medium text-sm">
+                          {project.category}
+                        </span>
+                      </div>
 
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          openPopup(project);
-        }}
-        className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition-all duration-300"
-      >
-        <ArrowRight className="group-hover:-rotate-45 transition-transform duration-300" />
-      </button>
-    </div>
-  </div>
-</div>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openPopup(project);
+                        }}
+                        className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition-all duration-300"
+                      >
+                        <ArrowRight className="group-hover:-rotate-45 transition-transform duration-300" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
 
               </div>
             ))}
@@ -311,18 +305,17 @@ const HeroCurasol = () => {
               <button
                 key={index}
                 onClick={() => scrollToCard(index)}
-                className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
-                  index === activeIndex
+                className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${index === activeIndex
                     ? "bg-red-600 w-6 sm:w-8"
                     : "bg-gray-600 w-1.5 sm:w-2 hover:bg-gray-500"
-                }`}
+                  }`}
               />
             ))}
           </div>
         </div>
       </div>
 
-      {/* ⭐ POPUP MODAL */}
+      {/* POPUP MODAL */}
       {showPopup && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-9999 p-6">
           <div className="relative w-full max-w-2xl bg-zinc-900 rounded-2xl overflow-visible shadow-xl border border-zinc-700">
@@ -338,7 +331,7 @@ const HeroCurasol = () => {
                 src={popupImages[slideIndex]}
                 alt="slide"
                 className="w-full h-full object-cover"
-                 loading="lazy"
+                loading="lazy"
               />
 
               <button
@@ -359,9 +352,8 @@ const HeroCurasol = () => {
               {popupImages.map((_, i) => (
                 <div
                   key={i}
-                  className={`h-2 w-2 rounded-full ${
-                    slideIndex === i ? "bg-red-600" : "bg-gray-500"
-                  }`}
+                  className={`h-2 w-2 rounded-full ${slideIndex === i ? "bg-red-600" : "bg-gray-500"
+                    }`}
                 ></div>
               ))}
             </div>

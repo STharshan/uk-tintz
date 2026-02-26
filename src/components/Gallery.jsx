@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect } from "react";
+
 
 import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
 
@@ -63,7 +62,7 @@ export default function SocialInspirationSection() {
             data-aos="zoom-in"
             data-aos-delay="400"
           >
-            <div className="w-[70px] h-[70px] md:w-[85px] md:h-[85px] rounded-full flex items-center justify-center bg-gradient-to-br from-[#FEDA75] via-[#d12774] to-[#962FBF] shadow-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
+            <div className="w-[70px] h-[70px] md:w-[85px] md:h-[85px] rounded-full flex items-center justify-center bg-linear-to-br from-[#FEDA75] via-[#d12774] to-[#962FBF] shadow-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
               <FaInstagram className="text-white text-[32px] md:text-[40px]" />
             </div>
           </a>
